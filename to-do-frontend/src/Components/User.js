@@ -24,6 +24,7 @@ const User = () => {
 
             const data = await response.json();
             setTasks(data.tasks);
+            console.log(data.tasks);  // here brt, here
         } catch (error) {
             setError(error.message);
         }
@@ -39,7 +40,9 @@ const User = () => {
                 </div>
                 <button type="submit">Show Tasks</button>
             </form>
+
             {error && <div style={{ color: 'red' }}>{error}</div>}
+            
             {tasks && (
                 <div>
                     <p>Tasks for {username}:</p>
