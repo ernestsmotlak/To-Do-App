@@ -3,6 +3,10 @@
 Made using React, Node.js and Sqlite.
 
 ## Current
+- Pass login successful (true/false) into the child components.
+    - If ls = true show task components.
+    - Otherwise show error message.
+
 
 - After user is logged in, show all tasks belonging to user.
 

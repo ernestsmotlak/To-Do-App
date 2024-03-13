@@ -88,23 +88,23 @@ app.post('/user/', (req, res) => {
     });
 });
 
-app.post('/fetchtest/', (req, res) => {
-    const { taskName } = req.body;
+// app.post('/fetchtest/', (req, res) => {
+//     const { taskName } = req.body;
 
-    const sql = 'SELECT * FROM Task WHERE TaskName = ?';
-    db.all(sql, [taskName], (err, allTasks) => {
-        if (err) {
-            console.error('Error executing query:', error.message);
-            return res.status(500).json({ error: 'Internal server error' });
-        }
+//     const sql = 'SELECT * FROM Task WHERE TaskName = ?';
+//     db.all(sql, [taskName], (err, allTasks) => {
+//         if (err) {
+//             console.error('Error executing query:', error.message);
+//             return res.status(500).json({ error: 'Internal server error' });
+//         }
 
-        if (!allTasks.length) {
-            return res.status(401).json({ error: 'No tasks with that name was found!' });
-        }
+//         if (!allTasks.length) {
+//             return res.status(401).json({ error: 'No tasks with that name was found!' });
+//         }
 
-        res.json({ message: 'Task found!', allTasks });
-    });
-});
+//         res.json({ message: 'Task found!', allTasks });
+//     });
+// });
 
 
 app.get('/', (req, res) => {
