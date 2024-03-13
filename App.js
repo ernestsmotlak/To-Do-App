@@ -70,7 +70,7 @@ app.get('/api/tasks', (req, res) => {
     });
 });
 
-app.post('/user/aa', (req, res) => {
+app.post('/user/', (req, res) => {
     const { username } = req.body;
 
     const sql = 'SELECT * FROM Task WHERE TaskUser = ?';
@@ -85,6 +85,24 @@ app.post('/user/aa', (req, res) => {
         }
 
         res.json({ message: 'Tasks found', tasks });
+    });
+});
+
+app.post('/fetchtest/', (req, res) => {
+    const { taskName } = req.body;
+
+    const sql = 'SELECT * FROM Task WHERE TaskName = ?';
+    db.all(sql, [taskName], (err, allTasks) => {
+        if (err) {
+            console.error('Error executing query:', error.message);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+
+        if (!allTasks.length) {
+            return res.status(401).json({ error: 'No tasks with that name was found!' });
+        }
+
+        res.json({ message: 'Task found!', allTasks });
     });
 });
 

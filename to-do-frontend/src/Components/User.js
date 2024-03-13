@@ -9,7 +9,7 @@ const User = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/user/aa', {
+            const response = await fetch('http://localhost:3000/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

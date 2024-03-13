@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import LoginForm from './Components/LoginForm';
 import User from './Components/User';
+import TestFetch from './Components/TestFetch';
 
 function App() {
   return (
@@ -11,6 +11,8 @@ function App() {
       <br/>
       <br/>
       <User />
+      <br />
+      <TestFetch />
     </div>
   );
 }
