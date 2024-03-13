@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <LoginForm />
       <br />
-      <User />
+      {/* <User /> */}
       <br />
       {/* <TestFetch /> */}
     </div>
