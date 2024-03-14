@@ -70,23 +70,23 @@ app.get('/api/tasks', (req, res) => {
     });
 });
 
-// app.post('/user/', (req, res) => {
-//     const { username } = req.body;
+app.post('/userTasks', (req, res) => {
+    const { username } = req.body;
 
-//     const sql = 'SELECT * FROM Task WHERE TaskUser = ?';
-//     db.all(sql, [username], (err, tasks) => {
-//         if (err) {
-//             console.error('Error executing query:', err.message);
-//             return res.status(500).json({ error: 'Internal server error' });
-//         }
+    const sql = 'SELECT * FROM Task WHERE TaskUser = ?';
+    db.all(sql, [username], (err, tasks) => {
+        if (err) {
+            console.error('Error executing query:', err.message);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
 
-//         if (!tasks.length) {
-//             return res.status(401).json({ error: 'No tasks found for the user' });
-//         }
+        if (!tasks.length) {
+            return res.status(401).json({ error: 'No tasks found for the user' });
+        }
 
-//         res.json({ message: 'Tasks found', tasks });
-//     });
-// });
+        res.json({ message: 'Tasks found', tasks });
+    });
+});
 
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');

@@ -25,6 +25,7 @@ const LoginForm = () => {
         throw new Error(errorData.error);
       }
 
+      console.log(username);
       // Reset form fields and error message
       setUsername('');
       setPassword('');
