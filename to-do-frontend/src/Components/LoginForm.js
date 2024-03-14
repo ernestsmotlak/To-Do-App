@@ -44,7 +44,7 @@ const LoginForm = () => {
     <div>
       <h2>Login</h2>
 
-      {error && <div style={{ color: 'red' }}>{error}</div>}
+      {/* {error && <div style={{ color: 'red' }}>{error}</div>} */}
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
@@ -60,7 +60,9 @@ const LoginForm = () => {
       {loginStatus !== null && (
         <div>
           {loginStatus ? (
-            <p>Login successful</p>
+            <div><br /> Go to user!
+              <p>Login successful</p>
+            </div>
           ) : (
             <p>Unsuccessful login!</p>
           )}
