@@ -28,16 +28,16 @@ app.post('/api/login', (req, res) => {
     db.get(sql, [username, password], (err, user) => {
         if (err) {
             console.error('Error executing query:', err.message);
-            return res.status(500).json({ error: 'Internal server error' });
+            return res.status(500).json({ error: 'Internal server error', loginSuccessful: false });
         }
 
         // If user does not exist, return error
         if (!user) {
-            return res.status(401).json({ error: 'Invalid username or password' });
+            return res.status(401).json({ error: 'Invalid username or password', loginSuccessful: false });
         }
 
         // If user exists and password matches, send success response
-        res.json({ message: 'Login successful', user });
+        res.json({ message: 'Login successful', loginSuccessful: true });
     });
 });
 
