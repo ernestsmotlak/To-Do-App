@@ -41,11 +41,11 @@ const LoginForm = () => {
     }
   };
 
+
   return (
     <div>
       <h2>Login</h2>
 
-      {/* {error && <div style={{ color: 'red' }}>{error}</div>} */}
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
