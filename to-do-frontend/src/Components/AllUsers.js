@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Child from './Child';
 
 const AllUsers = () => {
     const [error, setError] = useState('');
@@ -45,23 +44,8 @@ const AllUsers = () => {
         <div>
             AllUsers
             <br />
-            Fetch all users. <br />
-            Save into a const. <br />
-            Return to App.js (Parent)
-
-            {/* <button onClick={showUsers}>Get Users</button> */}
-
             <br />
-            <br />
-            {users.length > 0 && (
-                <ul>
-                    {users.map((user, index) => (
-                        <li key={index}>{user.UserName}</li>
-                    ))}
-                </ul>
-            )}
             {error && <p>Error: {error}</p>}
-            <Child />
         </div>
     )
 }
