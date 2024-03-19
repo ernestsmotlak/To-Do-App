@@ -56,6 +56,20 @@ app.get('/api/users', (req, res) => {
     });
 });
 
+app.get('/api/usernames', (req, res) => {
+    // Execute SQL query to fetch data from the 'User' table
+    const sql = 'SELECT Username FROM User;'; // Adjust the query as per your table structure
+    db.all(sql, [], (err, rows) => {
+        if (err) {
+            console.error('Error executing query:', err.message);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+        // Send fetched data as a JSON response
+        res.json(rows);
+    });
+});
+
 app.get('/api/tasks', (req, res) => {
     // Execute SQL query to fetch data from the 'Task' table
     const sql = 'SELECT * FROM Task;'; // Adjust the query as per your table structure
