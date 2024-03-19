@@ -4,8 +4,7 @@ const AllUsers = () => {
     const [error, setError] = useState('');
     const [users, setUsers] = useState([]);
 
-    const showUsers = async (event) => {
-        // event.preventDefault();
+    const showUsers = async () => {
         let usernameArray = [];
 
         try {
@@ -45,7 +44,15 @@ const AllUsers = () => {
             AllUsers
             <br />
             <br />
+
             {error && <p>Error: {error}</p>}
+
+            {<ul>
+                {usernameArray.map((index) => (
+                    <li key={index}>{usernameArray[index]}</li>
+                ))}
+            </ul>}
+
         </div>
     )
 }
