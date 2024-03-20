@@ -41,6 +41,13 @@ const LoginForm = (props) => {
     }
   };
 
+  const findUsername = (arr, username) => {
+    if (arr.includes(username)) {
+      return "true";
+    } else {
+      return "false";
+    }
+  };
 
   return (
     <div>
@@ -70,13 +77,17 @@ const LoginForm = (props) => {
         </div>
       )}
 
-      {props.userArray && (
+Here: 
+      < br/>
+      {findUsername(props.userArray, username)}
+
+      {/* {props.userArray && (
         <ul >
           {props.userArray.map((username, index) => (
             <li key={index}>Username: {username}</li>
           ))}
         </ul>
-      ) }
+      ) } */}
 
     </div>
   );
