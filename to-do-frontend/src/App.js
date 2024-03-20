@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './Components/LoginForm';
 import UserSite from './Components/UserSite';
 import { useEffect, useState } from 'react';
+import NotFound from './Components/NotFound';
 
 function App() {
   const [usernameArray, setUsernameArray] = useState([]);
@@ -37,6 +38,7 @@ function App() {
           <Route path='/' element={<LoginForm userArray={usernameArray}/>} />
           {/* <Route path='/loginform' element={<LoginForm />} />
           <Route path='/user' element={<UserSite />} /> */}
+          <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </div>
     </Router>
