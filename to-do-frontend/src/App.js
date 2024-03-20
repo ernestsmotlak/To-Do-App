@@ -4,6 +4,7 @@ import LoginForm from './Components/LoginForm';
 import UserSite from './Components/UserSite';
 import { useEffect, useState } from 'react';
 import NotFound from './Components/NotFound';
+import User from './Components/User';
 
 function App() {
   const [usernameArray, setUsernameArray] = useState([]);
@@ -35,10 +36,16 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/' element={<LoginForm userArray={usernameArray}/>} />
-          {/* <Route path='/loginform' element={<LoginForm />} />
-          <Route path='/user' element={<UserSite />} /> */}
+          <Route path='/' element={<LoginForm userArray={usernameArray} />} />
           <Route path='*' element={<NotFound />}></Route>
+          {/* <Route path='/user' element={<UserSite />} /> */}
+
+          {usernameArray.map((username, index) => (
+            <Route key={index} path={`username/${username}`} element={<User />} />
+          ))}
+
+         
+
         </Routes>
       </div>
     </Router>

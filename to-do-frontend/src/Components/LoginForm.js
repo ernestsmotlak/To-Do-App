@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './LoginForm.css';
 
 const LoginForm = (props) => {
@@ -69,6 +69,15 @@ const LoginForm = (props) => {
           )}
         </div>
       )}
+
+      {props.userArray && (
+        <ul >
+          {props.userArray.map((username, index) => (
+            <li key={index}>Username: {username}</li>
+          ))}
+        </ul>
+      ) }
+
     </div>
   );
 };
