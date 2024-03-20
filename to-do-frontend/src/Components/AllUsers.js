@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 const AllUsers = () => {
     const [error, setError] = useState('');
     const [users, setUsers] = useState([]);
+    const [usernameArray, setUsernameArray] = useState([]);
 
     const showUsers = async () => {
-        let usernameArray = [];
 
         try {
             const response = await fetch('http://localhost:3000/api/usernames', {
@@ -24,11 +24,14 @@ const AllUsers = () => {
             setUsers(data);
             // console.log("Data: ", data);
 
+            const newArray = [];
             for (let i = 0; i < data.length; i++) {
-                usernameArray.push(data[i].UserName);
+                newArray.push(data[i].UserName);
             }
 
-            console.log(usernameArray);
+            console.log("New array: " + newArray);
+            setUsernameArray(newArray);
+            // console.log(usernameArray);
 
         } catch (error) {
             setError(error.message);
@@ -39,6 +42,10 @@ const AllUsers = () => {
         showUsers();
     }, []);
 
+    useEffect(() => {
+        console.log('Usernamearray: ' + usernameArray);
+    }, [usernameArray]);
+
     return (
         <div>
             AllUsers
@@ -48,8 +55,8 @@ const AllUsers = () => {
             {error && <p>Error: {error}</p>}
 
             {<ul>
-                {usernameArray.map((index) => (
-                    <li key={index}>{usernameArray[index]}</li>
+                {usernameArray.map((username, index) => (
+                    <li key={index}>{username}</li>
                 ))}
             </ul>}
 
