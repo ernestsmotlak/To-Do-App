@@ -34,7 +34,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/' element={<LoginForm />} />
+          <Route path='/' element={<LoginForm userArray={usernameArray}/>} />
           {/* <Route path='/loginform' element={<LoginForm />} />
           <Route path='/user' element={<UserSite />} /> */}
         </Routes>
