@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
 const LoginForm = (props) => {
@@ -6,6 +7,7 @@ const LoginForm = (props) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loginStatus, setLoginStatus] = useState(null); // State variable to hold login status
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,15 +27,15 @@ const LoginForm = (props) => {
         throw new Error(errorData.error);
       }
 
-      console.log(username);
       // Reset form fields and error message
-      setUsername('');
+      // setUsername('');
       setPassword('');
       setError('');
 
       // Handle successful login response
       const data = await response.json();
       setLoginStatus(data.loginSuccessful); // Set login status
+      
 
     } catch (error) {
       setError(error.message);
@@ -41,13 +43,16 @@ const LoginForm = (props) => {
     }
   };
 
-  const findUsername = (arr, username) => {
-    if (arr.includes(username)) {
-      return "true";
-    } else {
-      return "false";
-    }
+  const navigateToUser = (username) => {
+    navigate(`/username/${username}`);
   };
+
+  useEffect(() => {
+    if (loginStatus) {
+      navigateToUser(username);
+    }
+  }, [loginStatus, navigateToUser, username])
+
 
   return (
     <div>
@@ -68,8 +73,8 @@ const LoginForm = (props) => {
       {loginStatus !== null && (
         <div>
           {loginStatus ? (
-            <div><br /> Go to user!
-              <p>Login successful</p>
+            <div><br />
+              Successful login!
             </div>
           ) : (
             <p>Unsuccessful login!</p>
@@ -77,10 +82,11 @@ const LoginForm = (props) => {
         </div>
       )}
 
-Here: 
-      < br/>
-      {findUsername(props.userArray, username)}
+      <br />
+      <br />
+      <br />
 
+      {/* Logged in and exists: {goToLoggedInUser(props.userArray, username)} */}
       {/* {props.userArray && (
         <ul >
           {props.userArray.map((username, index) => (
