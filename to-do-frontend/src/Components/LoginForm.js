@@ -35,7 +35,7 @@ const LoginForm = (props) => {
       // Handle successful login response
       const data = await response.json();
       setLoginStatus(data.loginSuccessful); // Set login status
-      
+
 
     } catch (error) {
       setError(error.message);
