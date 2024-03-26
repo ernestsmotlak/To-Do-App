@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 
 const User = () => {
     const [error, setError] = useState('');
     const [tasks, setTasks] = useState(null);
     const [username, setUsername] = useState('');
+    const [fetchedUsername, setFetchedUsername] = useState('');
+
+    const fetchUsername = () => {
+        var temp = window.location.href;
+        temp = temp.replace('http://localhost:3001/username/', '');
+        setFetchedUsername(temp);
+        
+    };
+
+
+
+    useEffect(() => {
+        fetchUsername();
+    }, []);
+    
+
 
     const showUsersTasks = async (event) => {
         event.preventDefault();
@@ -32,7 +49,7 @@ const User = () => {
 
     return (
         <div>
-            <h2>User Tasks</h2>
+            <h2>User: </h2> {username}
             <form onSubmit={showUsersTasks}>
                 <div>
                     <label>Username:</label>
@@ -42,7 +59,7 @@ const User = () => {
             </form>
 
             {error && <div style={{ color: 'red' }}>{error}</div>}
-            
+
             {tasks && (
                 <div>
                     <p>Tasks for {username}:</p>
@@ -55,6 +72,8 @@ const User = () => {
                     </ul>
                 </div>
             )}
+            Here: 
+            {fetchedUsername}
         </div>
     );
 };
