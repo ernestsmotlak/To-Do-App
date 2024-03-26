@@ -11,16 +11,12 @@ const User = () => {
         var temp = window.location.href;
         temp = temp.replace('http://localhost:3001/username/', '');
         setFetchedUsername(temp);
-        
     };
-
 
 
     useEffect(() => {
         fetchUsername();
     }, []);
-    
-
 
     const showUsersTasks = async (event) => {
         event.preventDefault();
@@ -72,7 +68,7 @@ const User = () => {
                     </ul>
                 </div>
             )}
-            Here: 
+            Here:
             {fetchedUsername}
         </div>
     );

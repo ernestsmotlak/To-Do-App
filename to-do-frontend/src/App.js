@@ -36,8 +36,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/' element={<LoginForm userArray={usernameArray} />} />
-          <Route path='*' element={<NotFound />}></Route>
+          <Route sensitive={true} path='/' element={<LoginForm userArray={usernameArray} />} />
+          <Route sensitive={true} path='*' element={<NotFound />}></Route>
           {/* <Route path='/user' element={<UserSite />} /> */}
 
           {usernameArray.map((username, index) => (
