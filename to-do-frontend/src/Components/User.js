@@ -5,18 +5,19 @@ const User = () => {
     const [error, setError] = useState('');
     const [tasks, setTasks] = useState(null);
     const [username, setUsername] = useState('');
-    const [fetchedUsername, setFetchedUsername] = useState('');
+    const [fetchedUuid, setFetchedUuID] = useState('');
 
-    const fetchUsername = () => {
+    const fetchUuid = () => {
         var temp = window.location.href;
         temp = temp.replace('http://localhost:3001/username/', '');
-        setFetchedUsername(temp);
+        setFetchedUuID(temp);
     };
 
-
     useEffect(() => {
-        fetchUsername();
+        fetchUuid();
     }, []);
+
+    console.log("Fetched uuid: " + fetchedUuid);
 
     const showUsersTasks = async (event) => {
         event.preventDefault();
@@ -27,7 +28,7 @@ const User = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ username }),
+                body: JSON.stringify({ fetchedUuid }),
             });
 
             if (!response.ok) {
@@ -42,6 +43,7 @@ const User = () => {
             setError(error.message);
         }
     };
+
 
     return (
         <div>
@@ -69,7 +71,7 @@ const User = () => {
                 </div>
             )}
             Here:
-            {fetchedUsername}
+            {fetchedUuid}
         </div>
     );
 };

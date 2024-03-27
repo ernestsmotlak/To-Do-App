@@ -47,7 +47,7 @@ const LoginForm = (props) => {
   useEffect(() => {
     if (loginStatus && uniqueUserId) {
       navigateToUser();
-      console.log('ID from UseEffect: ' + uniqueUserId);
+      // console.log('ID from UseEffect: ' + uniqueUserId);
     }
   }, [loginStatus, uniqueUserId]);
 
