@@ -7,6 +7,7 @@ const LoginForm = (props) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loginStatus, setLoginStatus] = useState(null); // State variable to hold login status
+  const [uniqueUserId, setUniqueUserId] = useState(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -34,8 +35,8 @@ const LoginForm = (props) => {
 
       // Handle successful login response
       const data = await response.json();
-      setLoginStatus(data.loginSuccessful); // Set login status
-
+      setLoginStatus(data.loginSuccessful);
+      setUniqueUserId(data.UniqueUserID);
 
     } catch (error) {
       setError(error.message);
@@ -43,16 +44,16 @@ const LoginForm = (props) => {
     }
   };
 
-  const navigateToUser = (username) => {
-    navigate(`/username/${username}`);
-  };
-
   useEffect(() => {
-    if (loginStatus) {
-      navigateToUser(username);
+    if (loginStatus && uniqueUserId) {
+      navigateToUser();
+      console.log('ID from UseEffect: ' + uniqueUserId);
     }
-  }, [loginStatus, navigateToUser, username])
+  }, [loginStatus, uniqueUserId]);
 
+  const navigateToUser = () => {
+    navigate(`/username/${uniqueUserId}`);
+  };
 
   return (
     <div>

@@ -24,7 +24,7 @@ app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
 
     // Query the database to find the user with the provided username and password
-    const sql = 'SELECT * FROM User WHERE username = ? AND password = ?';
+    const sql = 'SELECT UniqueUserID FROM User WHERE username = ? AND password = ?';
     db.get(sql, [username, password], (err, user) => {
         if (err) {
             console.error('Error executing query:', err.message);
@@ -37,7 +37,7 @@ app.post('/api/login', (req, res) => {
         }
 
         // If user exists and password matches, send success response
-        res.json({ message: 'Login successful', loginSuccessful: true });
+        res.json({ message: 'Login successful', loginSuccessful: true, UniqueUserID: user.UniqueUserID });
     });
 });
 

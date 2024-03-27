@@ -10,7 +10,7 @@ function App() {
   const [uuidArray, setUuidArray] = useState([]);
 
   useEffect(() => {
-    const fetchAllUsernames = async () => {
+    const fetchAllUserIDs = async () => {
       try {
         const response = await fetch('http://localhost:3000/api/uuid');
 
@@ -29,7 +29,7 @@ function App() {
     };
 
 
-    fetchAllUsernames();
+    fetchAllUserIDs();
   }, []);
 
   return (
@@ -44,7 +44,7 @@ function App() {
             <Route key={index} path={`username/${uniqueUserID}`} element={<User />} />
           ))}
 
-         
+
 
         </Routes>
       </div>
