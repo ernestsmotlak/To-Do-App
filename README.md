@@ -3,8 +3,7 @@
 Made using React, Node.js and Sqlite.
 
 ## Current
-- Remake the usersite and loginform components.
-- The UserSite.js should be the parent, the LoginForm.js a child.
+- In LoginForm fetch users unique id and navigate to username/uuid.
 
 
 ## Next

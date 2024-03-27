@@ -7,20 +7,20 @@ import NotFound from './Components/NotFound';
 import User from './Components/User';
 
 function App() {
-  const [usernameArray, setUsernameArray] = useState([]);
+  const [uuidArray, setUuidArray] = useState([]);
 
   useEffect(() => {
     const fetchAllUsernames = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/usernames');
+        const response = await fetch('http://localhost:3000/api/uuid');
 
         if (!response.ok) {
           throw new Error('Failed to fetch usernames.');
         }
 
         const data = await response.json();
-        const newArray = data.map(user => user.UserName);
-        setUsernameArray(newArray);
+        const newArray = data.map(user => user.UniqueUserID);
+        setUuidArray(newArray);
         console.log('New Array: ' + newArray);
 
       } catch (error) {
@@ -36,13 +36,12 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/' element={<LoginForm userArray={usernameArray} />} />
+          <Route path='/' element={<LoginForm uniqueIdArray={uuidArray} />} />
           <Route path='*' element={<NotFound />}></Route>
-          {/* sensitive={true} */}
           {/* <Route path='/user' element={<UserSite />} /> */}
 
-          {usernameArray.map((username, index) => (
-            <Route key={index} path={`username/${username}`} element={<User />} />
+          {uuidArray.map((uniqueUserID, index) => (
+            <Route key={index} path={`username/${uniqueUserID}`} element={<User />} />
           ))}
 
          
