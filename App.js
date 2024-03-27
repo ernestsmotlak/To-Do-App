@@ -99,10 +99,10 @@ app.get('/api/uuid', (req, res) => {
 });
 
 app.post('/userTasks', (req, res) => {
-    const { username } = req.body;
+    const { uuid } = req.body;
 
-    const sql = 'SELECT * FROM Task WHERE TaskUser = ?';
-    db.all(sql, [username], (err, tasks) => {
+    const sql = 'SELECT * FROM Task WHERE TaskUniqueUserID = ?';
+    db.all(sql, [uuid], (err, tasks) => {
         if (err) {
             console.error('Error executing query:', err.message);
             return res.status(500).json({ error: 'Internal server error' });
