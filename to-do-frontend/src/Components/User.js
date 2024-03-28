@@ -5,8 +5,8 @@ import AddTask from './AddTask';
 const User = () => {
     const [error, setError] = useState('');
     const [tasks, setTasks] = useState(null);
-    const [username, setUsername] = useState('');
     const [fetchedUuid, setFetchedUuID] = useState('');
+    const [username, setUsername] = useState('');
 
     const fetchUuid = () => {
         var temp = window.location.href;
@@ -45,6 +45,7 @@ const User = () => {
 
             const data = await response.json();
             setTasks(data.tasks);
+            // setUsername(tasks[0].TaskUser);
 
         } catch (error) {
             setError(error.message);
@@ -52,6 +53,12 @@ const User = () => {
 
     };
 
+    useEffect(() => {
+        // Update the username state when tasks state changes
+        if (tasks && tasks.length > 0) {
+            setUsername(tasks[0].TaskUser);
+        }
+    }, [tasks]);
 
     return (
         <div>
@@ -68,6 +75,7 @@ const User = () => {
 
             {tasks && (
                 <div>
+                    TaskUser: {username}
                     <p>Tasks for {fetchedUuid}:</p>
                     {tasks.map((task, index) => (
                         <div key={index}>
