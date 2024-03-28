@@ -85,7 +85,7 @@ const User = () => {
                 </div>
             )}
 
-            <AddTask />
+            <AddTask username={username} uuid={fetchedUuid} />
         </div>
     );
 };

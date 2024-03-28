@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 
-const AddTask = () => {
+const AddTask = (props) => {
     const [taskName, setTaskName] = useState('');
     const [taskDate, setTaskDate] = useState('');
     const [taskTime, setTaskTime] = useState('');
+    const passedUsername = props.username;
+    const passedUuid = props.uuid;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -41,8 +43,11 @@ const AddTask = () => {
             <br />
             <br />
             <br />
-            AddTask
+            <h2>AddTask</h2>
             <br />
+            Passed username: {passedUsername}
+            <br />
+            Passed uuid: {passedUuid}
             <br />
             <form onSubmit={handleSubmit}>
                 <div>
