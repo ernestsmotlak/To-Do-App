@@ -98,7 +98,7 @@ app.get('/api/uuid', (req, res) => {
     });
 });
 
-app.post('/userTasks', (req, res) => {
+app.post('/api/userTasks', (req, res) => {
     const { uuid } = req.body;
 
     const sql = 'SELECT * FROM Task WHERE TaskUniqueUserID = ?';

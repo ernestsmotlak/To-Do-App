@@ -9,26 +9,29 @@ const User = () => {
 
     const fetchUuid = () => {
         var temp = window.location.href;
-        temp = temp.replace('http://localhost:3001/username/', '');
-        setFetchedUuID(temp);
+        setFetchedUuID(temp.replace('http://localhost:3006/username/', ''));
     };
 
     useEffect(() => {
         fetchUuid();
-    }, []);
+    }, [fetchUuid]);
 
-    console.log("Fetched uuid: " + fetchedUuid);
+    useEffect(() => {
+        if (fetchedUuid !== '') {
+            showUsersTasks();
+        }
+    }, [fetchedUuid]);
+
 
     const showUsersTasks = async (event) => {
-        event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/userTasks', {
+            const response = await fetch('http://localhost:3000/api/userTasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ fetchedUuid }),
+                body: JSON.stringify({ uuid: fetchedUuid }),
             });
 
             if (!response.ok) {
@@ -38,23 +41,24 @@ const User = () => {
 
             const data = await response.json();
             setTasks(data.tasks);
-            console.log(data.tasks);  // here brt, here
+
         } catch (error) {
             setError(error.message);
         }
+
     };
 
 
     return (
         <div>
-            <h2>User: </h2> {username}
-            <form onSubmit={showUsersTasks}>
+            <h2>User: </h2>
+            {/* <form onSubmit={showUsersTasks}>
                 <div>
                     <label>Username:</label>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
                 </div>
                 <button type="submit">Show Tasks</button>
-            </form>
+            </form> */}
 
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
@@ -64,13 +68,13 @@ const User = () => {
                     <ul>
                         {tasks.map((task, index) => (
                             <li key={index}>
-                                Task ID: {task.TaskId}, Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}
+                                Task ID: {task.TaskId}, Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser}
                             </li>
                         ))}
                     </ul>
                 </div>
             )}
-            Here:
+            Here: <br />
             {fetchedUuid}
         </div>
     );
