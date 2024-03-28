@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from './Components/LoginForm';
-import UserSite from './Components/UserSite';
 import { useEffect, useState } from 'react';
 import NotFound from './Components/NotFound';
 import User from './Components/User';
@@ -38,7 +37,6 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginForm uniqueIdArray={uuidArray} />} />
           <Route path='*' element={<NotFound />}></Route>
-          {/* <Route path='/user' element={<UserSite />} /> */}
 
           {uuidArray.map((uniqueUserID, index) => (
             <Route key={index} path={`username/${uniqueUserID}`} element={<User />} />

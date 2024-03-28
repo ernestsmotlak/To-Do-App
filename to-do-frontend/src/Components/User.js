@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import AddTask from './AddTask';
 
 const User = () => {
     const [error, setError] = useState('');
@@ -24,6 +25,9 @@ const User = () => {
 
 
     const showUsersTasks = async (event) => {
+        if (event) {
+            event.preventDefault(); // Prevent default form submission behavior if event is provided
+        }
 
         try {
             const response = await fetch('http://localhost:3000/api/userTasks', {
@@ -64,18 +68,16 @@ const User = () => {
 
             {tasks && (
                 <div>
-                    <p>Tasks for {username}:</p>
-                    <ul>
-                        {tasks.map((task, index) => (
-                            <li key={index}>
-                                Task ID: {task.TaskId}, Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser}
-                            </li>
-                        ))}
-                    </ul>
+                    <p>Tasks for {fetchedUuid}:</p>
+                    {tasks.map((task, index) => (
+                        <div key={index}>
+                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser}
+                        </div>
+                    ))}
                 </div>
             )}
-            Here: <br />
-            {fetchedUuid}
+
+            <AddTask />
         </div>
     );
 };
