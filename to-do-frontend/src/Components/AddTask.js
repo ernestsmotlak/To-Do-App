@@ -21,7 +21,7 @@ const AddTask = (props) => {
                     taskName: taskName,
                     taskTime: taskTime,
                     taskDate: taskDate,
-                    userId: passedUuid, // Replace with the actual user ID
+                    userId: passedUuid,
                     taskUser: passedUsername,
                 }),
             });

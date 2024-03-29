@@ -48,7 +48,7 @@ app.post('/api/addTask', (req, res) => {
         return res.status(400).json({ error: "All fields are required." });
     }
 
-    const sql = 'INSERT INTO Task (TaskName, TaskTime, TaskDate, TaskUser, TaskUniqueUserID) VALUES (?, ?, ?, ?, ?)';
+    const sql = 'INSERT INTO Task (TaskName, TaskTime, TaskDate, TaskUniqueUserID, TaskUser) VALUES (?, ?, ?, ?, ?)';
     db.run(sql, [taskName, taskTime, taskDate, userId, taskUser], function (err) {
         if (err) {
             console.error('Erorr executing query: ', err.message);
