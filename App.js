@@ -41,6 +41,24 @@ app.post('/api/login', (req, res) => {
     });
 });
 
+app.post('/api/addTask', (req, res) => {
+    const { taskName, taskTime, taskDate, userId, taskUser } = req.body;
+
+    if (!taskDate || !taskName || !taskTime || !userId || !taskUser) {
+        return res.status(400).json({ error: "All fields are required." });
+    }
+
+    const sql = 'INSERT INTO Task (TaskName, TaskTime, TaskDate, TaskUser, TaskUniqueUserID) VALUES (?, ?, ?, ?, ?)';
+    db.run(sql, [taskName, taskTime, taskDate, userId, taskUser], function (err) {
+        if (err) {
+            console.error('Erorr executing query: ', err.message);
+            return err.status(500).json({ error: 'Internal server error.' });
+        }
+
+        res.json({ message: 'Task added successfully.' });
+    })
+});
+
 // Define other routes for fetching data
 app.get('/api/users', (req, res) => {
     // Execute SQL query to fetch data from the 'User' table
@@ -130,27 +148,9 @@ app.post('api/username', (req, res) => {
             return res.status(401).json({ error: 'No users with that uuid found!' });
         }
 
-        res.json({message: 'Username found', username});
+        res.json({ message: 'Username found', username });
     });
 });
-
-// api.post('api/addTask', (req, res) => {
-//     const { taskName, taskDate, taskTime } = req.body;
-
-//     if (!taskDate || !taskName || !taskTime) {
-//         return res.status(400).json({ error: "All fields are required." });
-//     }
-
-//     const sql = 'INSERT INTO Task (TaskName, TaskDate, TaskTime) VALUES (?, ?, ?)';
-//     db.run(sql, [taskName, taskDate, taskTime], function (err) {
-//         if (err) {
-//             console.error('Erorr executing query: ', err.message);
-//             return err.status(500).json({error: 'Internal server error.'});
-//         }
-
-//         res.json({message: 'Task added successfully.', taskId})
-//     })
-// });
 
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');

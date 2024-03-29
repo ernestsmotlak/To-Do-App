@@ -19,19 +19,25 @@ const AddTask = (props) => {
                 },
                 body: JSON.stringify({
                     taskName: taskName,
-                    taskDate: taskDate,
                     taskTime: taskTime,
-                    userId: 'user_id_here', // Replace with the actual user ID
+                    taskDate: taskDate,
+                    userId: passedUuid, // Replace with the actual user ID
+                    taskUser: passedUsername,
                 }),
             });
 
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error);
+            }
 
             // Clear input fields after successful submission
             setTaskName('');
             setTaskDate('');
             setTaskTime('');
 
-            console.log('Task added successfully');
+            console.log('Added -> Taskname: ' + taskName + ' , TaskDate: ' + taskDate + ' , TaskTime: ' + taskTime + ' , UID: ' + passedUuid + ' , Username: ' + passedUsername);
+
         } catch (error) {
             console.error('Error adding task:', error.message);
         }
