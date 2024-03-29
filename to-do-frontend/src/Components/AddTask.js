@@ -64,7 +64,7 @@ const AddTask = (props) => {
                     <label>Task Time: </label>
                     <input type="text" value={taskTime} onChange={(e) => setTaskTime(e.target.value)} />
                 </div>
-                <button type="submit">Show Tasks</button>
+                <button type="submit">Save task to db.</button>
             </form>
         </div>
     )
