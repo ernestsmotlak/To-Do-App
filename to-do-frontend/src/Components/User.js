@@ -91,7 +91,7 @@ const User = () => {
             )}
 
             <AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
-            <DeleteTask />
+            <DeleteTask username={username} uuid={fetchedUuid}/>
         </div>
     );
 };
