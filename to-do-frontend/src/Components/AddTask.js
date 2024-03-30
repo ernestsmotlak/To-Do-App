@@ -37,7 +37,8 @@ const AddTask = (props) => {
             setTaskTime('');
 
             console.log('Added -> Taskname: ' + taskName + ' , TaskDate: ' + taskDate + ' , TaskTime: ' + taskTime + ' , UID: ' + passedUuid + ' , Username: ' + passedUsername);
-
+            // Fetch all tasks for the user again.
+            props.fetchTasks();
         } catch (error) {
             console.error('Error adding task:', error.message);
         }

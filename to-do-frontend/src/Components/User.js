@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import AddTask from './AddTask';
+import DeleteTask from './SqlFunctionality/DeleteTask';
 
 const User = () => {
     const [error, setError] = useState('');
     const [tasks, setTasks] = useState(null);
     const [fetchedUuid, setFetchedUuID] = useState('');
     const [username, setUsername] = useState('');
+
+    const fetchTasks = () => {
+        showUsersTasks();
+    };
 
     const fetchUuid = () => {
         var temp = window.location.href;
@@ -64,12 +69,12 @@ const User = () => {
         <div>
             <h2>User: </h2>
             {/* <form onSubmit={showUsersTasks}>
-                <div>
-                    <label>Username:</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                </div>
-                <button type="submit">Show Tasks</button>
-            </form> */}
+                    <div>
+                        <label>Username:</label>
+                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    </div>
+                    <button type="submit">Show Tasks</button>
+                </form> */}
 
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
@@ -85,7 +90,8 @@ const User = () => {
                 </div>
             )}
 
-            <AddTask username={username} uuid={fetchedUuid} />
+            <AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
+            <DeleteTask />
         </div>
     );
 };
