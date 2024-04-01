@@ -59,6 +59,34 @@ app.post('/api/addTask', (req, res) => {
     })
 });
 
+app.post('/api/deleteTask', (req, res) => {
+    const { taskName, userUniqueID } = req.body;
+
+    if (!taskName) {
+        return res.status(400).json({ error: 'Task name is required!' });
+    }
+
+    if (!userUniqueID) {
+        return res.status(400).json({ error: '' });
+    }
+
+    const sql = 'DELETE FROM Task WHERE TaskName = ? AND TaskUniqueUserID = ?';
+    db.run(sql, [taskName, UniqueUserID], function (err) {
+        if (err) {
+            console.error('Error executing the query', err.message);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+
+        if (this.changes === 0) {
+            return res.status(404).json({error: 'No task found.'});
+        }
+
+        res.json({message: 'Successfully deleted from database.'});
+    });
+
+
+});
+
 // Define other routes for fetching data
 app.get('/api/users', (req, res) => {
     // Execute SQL query to fetch data from the 'User' table
