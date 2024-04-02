@@ -162,7 +162,7 @@ app.post('/api/userTasks', (req, res) => {
     });
 });
 
-app.post('/api/deleteTask', (req, res) => {
+app.post('/api/zbrisiTask', (req, res) => {
     const { taskName, uuid, username } = req.body;
 
     if (!taskName) {

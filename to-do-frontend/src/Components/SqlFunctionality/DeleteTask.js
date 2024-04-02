@@ -10,7 +10,7 @@ const DeleteTask = (props) => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/api/deleteTask', {
+            const response = await fetch('http://localhost:3000/api/zbrisiTask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
