@@ -78,10 +78,10 @@ app.post('/api/deleteTask', (req, res) => {
         }
 
         if (this.changes === 0) {
-            return res.status(404).json({error: 'No task found.'});
+            return res.status(404).json({ error: 'No task found.' });
         }
 
-        res.json({message: 'Successfully deleted from database.'});
+        res.json({ message: 'Successfully deleted from database.' });
     });
 
 
@@ -160,6 +160,39 @@ app.post('/api/userTasks', (req, res) => {
 
         res.json({ message: 'Tasks found', tasks });
     });
+});
+
+app.post('/api/deleteTask', (req, res) => {
+    const { taskName, uuid, username } = req.body;
+
+    if (!taskName) {
+        return res.status(400).json({ error: 'Task name is required!' });
+    }
+
+    if (!uuid) {
+        return res.status(400).json({ error: 'User unique ID is required!' });
+    }
+
+    if (!username) {
+        return res.status(400).json({ error: 'Username is required!' });
+    }
+
+    const sql = 'DELETE FROM Task WHERE TaskName = ? AND TaskUniqueUserID = ? AND TaskUser = ?';
+
+    db.run(sql, [taskName, uuid, username], function (err) {
+        if (err) {
+            console.error('Error making query.', err.message);
+            return res.status(500).json({ error: 'Internal server error.' });
+        }
+
+        if (this.changes === 0) {
+            return res.status(400).json({ error: 'No task found!' });
+        }
+
+        res.json({ message: 'Successfully deleted from db!' });
+
+    });
+
 });
 
 app.post('api/username', (req, res) => {
