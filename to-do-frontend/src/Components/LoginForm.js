@@ -83,10 +83,6 @@ const LoginForm = (props) => {
         </div>
       )}
 
-      <br />
-      <br />
-      <br />
-
       {/* Logged in and exists: {goToLoggedInUser(props.userArray, username)} */}
       {/* {props.userArray && (
         <ul >

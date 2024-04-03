@@ -38,7 +38,6 @@ const DeleteTask = (props) => {
     return (
         <div>
             <h2>DeleteTask</h2>
-            <br />
             Uuid: {passedUuid} <br />
             User: {passedUsername} <br />
 

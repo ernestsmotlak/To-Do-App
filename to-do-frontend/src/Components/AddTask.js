@@ -47,11 +47,7 @@ const AddTask = (props) => {
 
     return (
         <div>
-            <br />
-            <br />
-            <br />
             <h2>AddTask</h2>
-            <br />
             Passed username: {passedUsername}
             <br />
             Passed uuid: {passedUuid}
