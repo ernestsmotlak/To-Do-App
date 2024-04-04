@@ -3,11 +3,11 @@ import React from 'react'
 const DeleteButton = (props) => {
     const passedUuid = props.uuid;
     const passedUsername = props.username;
-    const passedTask = props.task;
+    const passedTask = props.taskName;
 
     return (
         <button>
-            aa
+            {passedTask}
         </button>
     )
 }
