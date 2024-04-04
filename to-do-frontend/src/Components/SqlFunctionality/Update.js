@@ -17,29 +17,6 @@ const Update = (props) => {
                 </div>
                 <button >Login</button>
             </form>
-            Task Time:
-            <br />
-            {/* <form onSubmit={}>
-                <div>
-                    <label>Username:</label>
-                    <input type="text" value={} onChange={(e) => setUsername(e.target.value)} />
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="text" value={} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                <button type="submit">Login</button>
-            </form> */}
-
-            <br />
-            <form>
-                <div>
-                    <label>Task Date:</label>
-                    <input type="text" />
-                </div>
-                <button >Login</button>
-            </form>
-
         </div>
     )
 }

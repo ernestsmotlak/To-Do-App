@@ -85,7 +85,7 @@ const User = () => {
                     <p>Tasks for {fetchedUuid}:</p>
                     {tasks.map((task, index) => (
                         <div key={index}>
-                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser}
+                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser} <button>{task.TaskName}</button>
                         </div>
                     ))}
                 </div>
