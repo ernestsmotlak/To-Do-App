@@ -4,6 +4,8 @@ const DeleteButton = (props) => {
     const passedUuid = props.uuid;
     const passedUsername = props.username;
     const passedTask = props.taskName;
+    const passedTime = props.taskTime;
+    const passedDate = props.taskDate;
 
     const submitDeleteTask = async (event) => {
         event.preventDefault();
@@ -18,6 +20,8 @@ const DeleteButton = (props) => {
                     taskName: passedTask,
                     uuid: passedUuid,
                     username: passedUsername,
+                    taskTime: passedTime,
+                    taskDate: passedDate,
                 })
             });
 

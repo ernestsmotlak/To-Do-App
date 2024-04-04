@@ -163,7 +163,7 @@ app.post('/api/userTasks', (req, res) => {
 });
 
 app.post('/api/zbrisiTask', (req, res) => {
-    const { taskName, uuid, username } = req.body;
+    const { taskName, uuid, username, taskTime, taskDate } = req.body;
 
     if (!taskName) {
         return res.status(400).json({ error: 'Task name is required!' });
@@ -177,9 +177,18 @@ app.post('/api/zbrisiTask', (req, res) => {
         return res.status(400).json({ error: 'Username is required!' });
     }
 
-    const sql = 'DELETE FROM Task WHERE TaskName = ? AND TaskUniqueUserID = ? AND TaskUser = ?';
+    if (!taskTime) {
+        return res.status(400).json({ error: 'TaskTime is required!' });
+    }
 
-    db.run(sql, [taskName, uuid, username], function (err) {
+    if (!taskDate) {
+        return res.status(400).json({ error: 'TaskDate is required!' });
+    }
+
+
+    const sql = 'DELETE FROM Task WHERE TaskName = ? AND TaskUniqueUserID = ? AND TaskUser = ? AND TaskTime = ? AND TaskDate = ?';
+
+    db.run(sql, [taskName, uuid, username, taskTime, taskDate], function (err) {
         if (err) {
             console.error('Error making query.', err.message);
             return res.status(500).json({ error: 'Internal server error.' });
