@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import AddTask from './AddTask';
-import DeleteTask from './SqlFunctionality/DeleteTask';
-import Update from './SqlFunctionality/Update';
 import DeleteButton from './SqlFunctionality/DeleteButton'
 
 const User = () => {
@@ -101,8 +99,6 @@ const User = () => {
             )}
 
             <AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
-            {/* <DeleteTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} /> */}
-            {/* <Update username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} /> */}
 
         </div>
     );
