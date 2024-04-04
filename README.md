@@ -1,15 +1,12 @@
 # To-Do-App
 
-Made using React, Node.js and Sqlite.
+React, Node.js, Sqlite.
 
 ## Current
-- In LoginForm fetch users unique id and navigate to username/uuid.
+- Update component: 
+    - Button
+    - On click needs to make the corresponding list item editable.
+    The TaskName, Date and Time need to be put into a placeholder type. See this link for help [w3schools](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder).
 
 
 ## Next
-
-- Make routes for user after logging in. 
-    - ``` 3000/user/userName -> for user 'userName' ```
-    - ``` 3000/user/aa  -> for user 'aa'```
-
-- User cannot see his tasks beforing logging in. Add some kind of 'security'.
