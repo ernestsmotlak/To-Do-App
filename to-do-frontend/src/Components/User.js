@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import AddTask from './AddTask';
 import DeleteTask from './SqlFunctionality/DeleteTask';
 import Update from './SqlFunctionality/Update';
+import DeleteButton from './SqlFunctionality/DeleteButton'
 
 const User = () => {
     const [error, setError] = useState('');
@@ -85,15 +86,15 @@ const User = () => {
                     <p>Tasks for {fetchedUuid}:</p>
                     {tasks.map((task, index) => (
                         <div key={index}>
-                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser} <button>{task.TaskName}</button>
+                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser} <DeleteButton></DeleteButton>
                         </div>
                     ))}
                 </div>
             )}
 
             <AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
-            <DeleteTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
-            <Update username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
+            {/* <DeleteTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} /> */}
+            {/* <Update username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} /> */}
 
         </div>
     );
