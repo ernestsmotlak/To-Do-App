@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import AddTask from './AddTask';
 import DeleteButton from './SqlFunctionality/DeleteButton'
+import Update from './SqlFunctionality/Update'
 
 const User = () => {
     const [error, setError] = useState('');
@@ -93,6 +94,8 @@ const User = () => {
                                 taskTime={task.TaskTime}
                                 taskDate={task.TaskDate}
                             />
+                            <br/>
+                            <Update />
                         </div>
                     ))}
                 </div>
