@@ -86,7 +86,15 @@ const User = () => {
                     <p>Tasks for {fetchedUuid}:</p>
                     {tasks.map((task, index) => (
                         <div key={index}>
-                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser} <DeleteButton username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} taskName={task.TaskName} taskTime={task.TaskTime} taskDate={task.TaskDate}/>
+                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser}
+                            <DeleteButton
+                                username={username}
+                                uuid={fetchedUuid}
+                                fetchTasks={fetchTasks}
+                                taskName={task.TaskName}
+                                taskTime={task.TaskTime}
+                                taskDate={task.TaskDate}
+                            />
                         </div>
                     ))}
                 </div>
