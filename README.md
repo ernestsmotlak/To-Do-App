@@ -3,7 +3,7 @@
 React, Node.js, Sqlite.
 
 ## Current
-
+- Add bootstrap.
 
 ## Next
 
