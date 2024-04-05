@@ -94,8 +94,14 @@ const User = () => {
                                 taskTime={task.TaskTime}
                                 taskDate={task.TaskDate}
                             />
-                            <br/>
-                            <Update />
+                            <Update
+                                username={username}
+                                uuid={fetchedUuid}
+                                fetchTasks={fetchTasks}
+                                taskName={task.TaskName}
+                                taskTime={task.TaskTime}
+                                taskDate={task.TaskDate}
+                            />
                         </div>
                     ))}
                 </div>

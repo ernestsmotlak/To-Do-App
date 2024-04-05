@@ -222,6 +222,32 @@ app.post('api/username', (req, res) => {
     });
 });
 
+app.post('api/updateTask', (req, res) => {
+    const { taskName, uuid, taskUser, newTaskName, newTaskTime, newTaskDate } = req.body;
+
+    if (!uuid || !taskUser || !taskName || !newTaskName || !newTaskTime || !newTaskDate) {
+        return res.status(400).json({ error: 'All fields are required!' });
+    }
+
+    const sql = 'UPDATE Task SET TaskName = ?, TaskTime = ?, TaskDate = ? WHERE TaskName = ? AND TaskUniqueUserID = ? AND TaskUser = ?';
+
+    db.run(sql, [newTaskName, newTaskTime, newTaskDate, taskName, uuid, taskUser], function (err) {
+        if (err) {
+            console.error('Error updating task!', err.message);
+            return res.status(500).json({ error: 'Internal server error.' });
+        }
+
+        if (this.changes === 0) {
+            return res.status(404).json({ error: 'No task found!' });
+        }
+
+        res.json({ message: 'Task updated successfully!' });
+
+    })
+
+
+});
+
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');
 });
