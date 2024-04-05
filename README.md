@@ -3,12 +3,9 @@
 React, Node.js, Sqlite.
 
 ## Current
-- Update component: 
-    - Button
-    - On click needs to make the corresponding list item editable.
-    The TaskName, Date and Time need to be put into a placeholder type. See this link for help [w3schools](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder).
-    
-    .
+- Need to add a button after every render of the task in User.js
+- Upon button click, the Update.js is shown
+- After clicking the button in the Update.js component, the Update.js hides, and shows the updated task.
 
 
 ## Next
