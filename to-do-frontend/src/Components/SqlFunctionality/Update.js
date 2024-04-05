@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { useEffect } from 'react';
 const Update = (props) => {
     const passedUsername = props.username;
     const passedUuid = props.uuid;
