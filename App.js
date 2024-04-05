@@ -222,7 +222,7 @@ app.post('api/username', (req, res) => {
     });
 });
 
-app.post('api/updateTask', (req, res) => {
+app.post('/api/updateTask', (req, res) => {
     const { taskName, uuid, taskUser, newTaskName, newTaskTime, newTaskDate } = req.body;
 
     if (!uuid || !taskUser || !taskName || !newTaskName || !newTaskTime || !newTaskDate) {
@@ -244,8 +244,6 @@ app.post('api/updateTask', (req, res) => {
         res.json({ message: 'Task updated successfully!' });
 
     })
-
-
 });
 
 app.get('/', (req, res) => {
