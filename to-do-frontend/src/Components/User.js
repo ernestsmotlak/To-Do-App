@@ -9,6 +9,7 @@ const User = () => {
     const [tasks, setTasks] = useState(null);
     const [fetchedUuid, setFetchedUuID] = useState('');
     const [username, setUsername] = useState('');
+    const [selectedTask, setselectedTask] = useState(null);
 
     const fetchTasks = () => {
         showUsersTasks();
@@ -66,6 +67,16 @@ const User = () => {
         }
     }, [tasks]);
 
+    const handleUpdateClick = (task) => {
+        // If the clicked button corresponds to the currently selected task, hide the Update component
+        if (selectedTask === task) {
+            setselectedTask(null);
+        } else {
+            // Otherwise, show the Update component for the clicked task
+            setselectedTask(task);
+        }
+    };
+
     return (
         <div>
             <h2>User: </h2>
@@ -94,14 +105,17 @@ const User = () => {
                                 taskTime={task.TaskTime}
                                 taskDate={task.TaskDate}
                             />
-                            <Update
+                            <button onClick={() => handleUpdateClick(task)}>Show UpdateComponent!</button>
+
+                            {selectedTask === task && (<Update
                                 uuid={fetchedUuid}
                                 username={username}
                                 fetchTasks={fetchTasks}
                                 taskName={task.TaskName}
                                 taskTime={task.TaskTime}
                                 taskDate={task.TaskDate}
-                            />
+                            />)}
+
                         </div>
                     ))}
                 </div>
