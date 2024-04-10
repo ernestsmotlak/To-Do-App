@@ -58,6 +58,7 @@ const LoginForm = (props) => {
   return (
     <div>
       <h2 className='mt-3 mb-3'>To-Do-App</h2>
+      <img src='/Users/ernestsmotlak/Desktop/mojiProjekti/to-do-app/to-do-frontend/testImage.png' alt='No image found!'></img>
 
       <form className='container' onSubmit={handleSubmit}>
         <div className='row justify-content-center'>
