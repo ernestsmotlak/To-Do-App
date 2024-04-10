@@ -80,14 +80,6 @@ const User = () => {
     return (
         <div>
             <h2>User: </h2>
-            {/* <form onSubmit={showUsersTasks}>
-                    <div>
-                        <label>Username:</label>
-                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    </div>
-                    <button type="submit">Show Tasks</button>
-                </form> */}
-
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {tasks && (

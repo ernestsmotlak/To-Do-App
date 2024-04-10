@@ -59,7 +59,7 @@ const LoginForm = (props) => {
     <div>
       <h2 className='mt-3 mb-3'>To-Do-App</h2>
 
-      <form className='bg-secondary container' onSubmit={handleSubmit}>
+      <form className='container' onSubmit={handleSubmit}>
         <div className='row justify-content-center'>
           <label className='form-label mt-2'>Username:</label>
           <input className='form-control w-75 mb-3' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -68,7 +68,10 @@ const LoginForm = (props) => {
           <label className='form-label'>Password:</label>
           <input className='form-control w-75' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button className='mt-3 mb-3' type="submit">Login</button>
+        <button
+          className='mt-3 mb-3 btn btn-primary'
+          type="submit"
+        >Login</button>
       </form>
 
       {loginStatus !== null && (
