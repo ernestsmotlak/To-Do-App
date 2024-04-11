@@ -55,7 +55,7 @@ const Update = (props) => {
                     <div>
                         <label>TaskName:</label>
                         <input type='text'
-                            placeholder={passedTask}
+                            placeholder="My Task"
                             value={newTaskName}
                             onChange={(e) => {
                                 const tempTaskName = e.target.value;
@@ -65,8 +65,10 @@ const Update = (props) => {
                     </div>
                     <div>
                         <label>TaskTime:</label>
-                        <input type='text'
-                            placeholder={passedTime}
+                        <input
+                            type='text'
+                            placeholder='14:45'
+                            pattern="[0-9]{2}:[0-9]{2}"
                             value={newTaskTime}
                             onChange={(e) => {
                                 const tempTaskTime = e.target.value;
@@ -79,6 +81,7 @@ const Update = (props) => {
                         {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
                         <input type='text'
                             placeholder={passedDate}
+                            // pattern=''
                             value={newTaskDate}
                             onChange={(e) => {
                                 const tempTaskDate = e.target.value;
