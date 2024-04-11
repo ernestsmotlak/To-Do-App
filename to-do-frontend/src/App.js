@@ -37,11 +37,9 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginForm uniqueIdArray={uuidArray} />} />
           <Route path='*' element={<NotFound />}></Route>
-
           {uuidArray.map((uniqueUserID, index) => (
             <Route key={index} path={`username/${uniqueUserID}`} element={<User />} />
           ))}
-
 
 
         </Routes>
