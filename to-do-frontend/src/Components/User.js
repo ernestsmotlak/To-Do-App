@@ -87,32 +87,46 @@ const User = () => {
                         TaskUser: {username}
                     </div>
                     {/* <p>Tasks for {fetchedUuid}:</p> */}
-                    {tasks.map((task, index) => (
-                        <div key={index}>
-                            <div className='bg-danger-subtle'>Task: {task.TaskName}</div>
+                    <div className=''>
+                        {tasks.map((task, index) => (
+                            <div key={index}>
+                                {/* <div className='bg-danger-subtle'>Task: {task.TaskName}</div>
                             <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
-                            <div className='bg-warning-subtle'>Date: {task.TaskDate}</div>
-                            <DeleteButton
-                                username={username}
-                                uuid={fetchedUuid}
-                                fetchTasks={fetchTasks}
-                                taskName={task.TaskName}
-                                taskTime={task.TaskTime}
-                                taskDate={task.TaskDate}
-                            />
-                            <button onClick={() => handleUpdateClick(task)}>Show UpdateComponent!</button>
+                            <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
 
-                            {selectedTask === task && (<Update
-                                uuid={fetchedUuid}
-                                username={username}
-                                fetchTasks={fetchTasks}
-                                taskName={task.TaskName}
-                                taskTime={task.TaskTime}
-                                taskDate={task.TaskDate}
-                            />)}
+                                <div className='container'>
+                                    <div className='row'>
+                                        <div className='col bg-danger-subtle d-flex justify-content-center align-items-center'>{task.TaskName}</div>
+                                        <div className='col'>
+                                            <div className='bg-warning-subtle'>{task.TaskTime}</div>
+                                            <div className='bg-info-subtle'>{task.TaskDate}</div>
+                                        </div>
+                                    </div>
 
-                        </div>
-                    ))}
+                                </div>
+
+                                <DeleteButton
+                                    username={username}
+                                    uuid={fetchedUuid}
+                                    fetchTasks={fetchTasks}
+                                    taskName={task.TaskName}
+                                    taskTime={task.TaskTime}
+                                    taskDate={task.TaskDate}
+                                />
+                                <button onClick={() => handleUpdateClick(task)}>Show UpdateComponent!</button>
+
+                                {selectedTask === task && (<Update
+                                    uuid={fetchedUuid}
+                                    username={username}
+                                    fetchTasks={fetchTasks}
+                                    taskName={task.TaskName}
+                                    taskTime={task.TaskTime}
+                                    taskDate={task.TaskDate}
+                                />)}
+
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
 

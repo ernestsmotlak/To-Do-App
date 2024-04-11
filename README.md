@@ -20,6 +20,9 @@ React, Node.js, Sqlite.
 </div>
  ```
 
+## CSS Next
+- On mobile view on the User.js component the horizontal alignment is not correct.
+
 ## Next
 
 - The first fetch of the uuid's in the App.js on start is unnecessary.

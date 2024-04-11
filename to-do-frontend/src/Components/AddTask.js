@@ -50,7 +50,7 @@ const AddTask = (props) => {
             <h2>AddTask</h2>
             Passed username: {passedUsername}
             <br />
-            Passed uuid: {passedUuid}
+            {/* Passed uuid: {passedUuid} */}
             <br />
             <form onSubmit={handleSubmit}>
                 <div>
