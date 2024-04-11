@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import AddTask from './AddTask';
 import DeleteButton from './SqlFunctionality/DeleteButton'
 import Update from './SqlFunctionality/Update'
+import './User.css';
 
 const User = () => {
     const [error, setError] = useState('');
@@ -97,8 +98,10 @@ const User = () => {
                                 <div className='container border border-primary border-2 rounded-2 mb-3'>
                                     {/* Here is the problem bg-black */}
                                     <div className='row'>
-                                        <div className='col bg-danger-subtle d-flex justify-content-center align-items-center'>{task.TaskName}</div>
-                                        <div className='col'>
+                                        <div className='col no-padding bg-danger-subtle d-flex justify-content-center align-items-center'>
+                                            {task.TaskName}
+                                        </div>
+                                        <div className='col no-padding'>
                                             <div className='bg-warning-subtle'>{task.TaskTime}</div>
                                             <div className='bg-info-subtle'>{task.TaskDate}</div>
                                         </div>
