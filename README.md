@@ -23,6 +23,7 @@ React, Node.js, Sqlite.
 ## CSS Next
 - On mobile view on the User.js component the horizontal alignment is not correct.
     - The elements on the right of taskName are not as wide as the taskName div.
+- For every task component add on hover functionality
 
 ## Next
 

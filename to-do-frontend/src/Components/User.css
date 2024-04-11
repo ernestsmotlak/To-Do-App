@@ -6,3 +6,8 @@
 .no-padding-right {
     padding-right: 0 !important;
 }
+
+.task {
+    max-width: 95% !important;
+    margin-right: 12px !important; /* This centers(ish) the task class */
+}

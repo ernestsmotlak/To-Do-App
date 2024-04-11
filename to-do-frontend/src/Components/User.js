@@ -88,7 +88,7 @@ const User = () => {
                         TaskUser: {username}
                     </div>
                     {/* <p>Tasks for {fetchedUuid}:</p> */}
-                    <div className=''>
+                    <div className='task'>
                         {tasks.map((task, index) => (
                             <div key={index}>
                                 {/* <div className='bg-danger-subtle'>Task: {task.TaskName}</div>
@@ -99,7 +99,7 @@ const User = () => {
                                 {/* border border-primary border-2 rounded-2 */}
                                     {/* Here is the problem bg-black */}
                                     <div className='row'>
-                                        <div className='col-8 border border-danger border-2 border-1 d-flex justify-content-center align-items-center'>
+                                        <div className='col-9 border border-danger border-2 border-1 d-flex justify-content-center align-items-center'>
                                             {task.TaskName}
                                         </div>
                                         <div className='col-3 border border-success border-2 no-padding'>
