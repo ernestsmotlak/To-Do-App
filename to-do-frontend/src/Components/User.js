@@ -94,7 +94,8 @@ const User = () => {
                             <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
                             <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
 
-                                <div className='container'>
+                                <div className='container border border-primary'>
+                                    {/* Here is the problem bg-black */}
                                     <div className='row'>
                                         <div className='col bg-danger-subtle d-flex justify-content-center align-items-center'>{task.TaskName}</div>
                                         <div className='col'>
@@ -113,7 +114,7 @@ const User = () => {
                                     taskTime={task.TaskTime}
                                     taskDate={task.TaskDate}
                                 />
-                                <button onClick={() => handleUpdateClick(task)}>Show UpdateComponent!</button>
+                                <button onClick={() => handleUpdateClick(task)}>Show!</button>
 
                                 {selectedTask === task && (<Update
                                     uuid={fetchedUuid}
