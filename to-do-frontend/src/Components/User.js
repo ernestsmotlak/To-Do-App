@@ -78,17 +78,20 @@ const User = () => {
     };
 
     return (
-        <div>
-            <h2>User: </h2>
+        <div className='container'>
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {tasks && (
-                <div>
-                    TaskUser: {username}
-                    <p>Tasks for {fetchedUuid}:</p>
+                <div className='row justify-content-center'>
+                    <div className='fw-bold mb-3 mt-3'>
+                        TaskUser: {username}
+                    </div>
+                    {/* <p>Tasks for {fetchedUuid}:</p> */}
                     {tasks.map((task, index) => (
                         <div key={index}>
-                            Task Name: {task.TaskName}, Task Time: {task.TaskTime}, Task Date: {task.TaskDate}, Task User: {task.TaskUser}
+                            <div className='bg-danger-subtle'>Task: {task.TaskName}</div>
+                            <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
+                            <div className='bg-warning-subtle'>Date: {task.TaskDate}</div>
                             <DeleteButton
                                 username={username}
                                 uuid={fetchedUuid}
