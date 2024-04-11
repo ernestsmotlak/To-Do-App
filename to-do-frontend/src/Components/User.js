@@ -94,7 +94,7 @@ const User = () => {
                             <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
                             <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
 
-                                <div className='container border border-primary'>
+                                <div className='container border border-primary mb-3'>
                                     {/* Here is the problem bg-black */}
                                     <div className='row'>
                                         <div className='col bg-danger-subtle d-flex justify-content-center align-items-center'>{task.TaskName}</div>
@@ -114,16 +114,17 @@ const User = () => {
                                     taskTime={task.TaskTime}
                                     taskDate={task.TaskDate}
                                 />
-                                <button onClick={() => handleUpdateClick(task)}>Show!</button>
-
-                                {selectedTask === task && (<Update
-                                    uuid={fetchedUuid}
-                                    username={username}
-                                    fetchTasks={fetchTasks}
-                                    taskName={task.TaskName}
-                                    taskTime={task.TaskTime}
-                                    taskDate={task.TaskDate}
-                                />)}
+                                <button className='mb-3' onClick={() => handleUpdateClick(task)}>Show!</button>
+                                
+                                {selectedTask === task &&
+                                    (<Update
+                                        uuid={fetchedUuid}
+                                        username={username}
+                                        fetchTasks={fetchTasks}
+                                        taskName={task.TaskName}
+                                        taskTime={task.TaskTime}
+                                        taskDate={task.TaskDate}
+                                    />)}
 
                             </div>
                         ))}
