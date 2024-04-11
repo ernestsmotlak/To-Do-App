@@ -20,6 +20,8 @@ React, Node.js, Sqlite.
 </div>
  ```
 
+ - Date input type [here](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_date)
+
 ## CSS Next
 - On mobile view on the User.js component the horizontal alignment is not correct.
     - The elements on the right of taskName are not as wide as the taskName div.

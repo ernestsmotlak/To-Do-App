@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 const Update = (props) => {
     const passedUsername = props.username;
     const passedUuid = props.uuid;
@@ -11,8 +9,6 @@ const Update = (props) => {
     const [newTaskName, setnewTaskName] = useState('');
     const [newTaskTime, setnewTaskTime] = useState('');
     const [newTaskDate, setnewTaskDate] = useState('');
-
-    // const [startDate, setStartDate] = useState(new Date());
 
     const sumbitUpdateTask = async (event) => {
         event.preventDefault();
@@ -55,7 +51,7 @@ const Update = (props) => {
                     <div>
                         <label>TaskName:</label>
                         <input type='text'
-                            placeholder="My Task"
+                            placeholder={passedTask}
                             value={newTaskName}
                             onChange={(e) => {
                                 const tempTaskName = e.target.value;
@@ -65,10 +61,8 @@ const Update = (props) => {
                     </div>
                     <div>
                         <label>TaskTime:</label>
-                        <input
-                            type='text'
-                            placeholder='14:45'
-                            pattern="[0-9]{2}:[0-9]{2}"
+                        <input type='text'
+                            placeholder={passedTime}
                             value={newTaskTime}
                             onChange={(e) => {
                                 const tempTaskTime = e.target.value;
@@ -78,17 +72,14 @@ const Update = (props) => {
                     </div>
                     <div>
                         <label>TaskDate:</label>
-                        {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /> */}
                         <input type='text'
                             placeholder={passedDate}
-                            // pattern=''
                             value={newTaskDate}
                             onChange={(e) => {
                                 const tempTaskDate = e.target.value;
                                 setnewTaskDate(tempTaskDate !== '' ? tempTaskDate : passedDate);
                             }}
-                        >
-                        </input>
+                        ></input>
                     </div>
                     <button type='submit' onClick={sumbitUpdateTask}>Update!</button>
                 </form>
