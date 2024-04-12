@@ -99,12 +99,12 @@ const User = () => {
                                     {/* border border-primary border-2 rounded-2 */}
                                     {/* Here is the problem bg-black */}
                                     <div className='row max-height60'>
-                                        <div className='col-9 border border-danger border-2 border-1 d-flex justify-content-center align-items-center'>
+                                        <div className='col-9  d-flex justify-content-center align-items-center'>
                                             {task.TaskName.length > 49 ? task.TaskName.substring(0, 49) + '...' : task.TaskName}
                                         </div>
-                                        <div className='col-3 border border-success border-2 no-padding'>
-                                            <div className='border border-warning border-2'>{task.TaskTime}</div>
-                                            <div className='border border-warning border-2'>{task.TaskDate.slice(5)}</div>
+                                        <div className='col-3  no-padding'>
+                                            <div className=''>{task.TaskTime}</div>
+                                            <div className=''>{task.TaskDate.slice(5)}</div>
                                         </div>
                                     </div>
 

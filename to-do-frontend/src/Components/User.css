@@ -15,5 +15,7 @@
 
 .max-height60 {
     max-height: 60px !important;
-    
+    background-color: #6F21D5;
+    color: white;
+    border-radius: 10px;
 }
