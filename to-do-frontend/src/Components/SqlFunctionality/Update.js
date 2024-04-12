@@ -61,7 +61,7 @@ const Update = (props) => {
                     </div>
                     <div>
                         <label>TaskTime:</label>
-                        <input type='text'
+                        <input type='time'
                             placeholder={passedTime}
                             value={newTaskTime}
                             onChange={(e) => {
@@ -72,7 +72,7 @@ const Update = (props) => {
                     </div>
                     <div>
                         <label>TaskDate:</label>
-                        <input type='text'
+                        <input type='date'
                             placeholder={passedDate}
                             value={newTaskDate}
                             onChange={(e) => {
