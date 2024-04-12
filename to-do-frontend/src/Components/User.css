@@ -13,9 +13,12 @@
     /* This centers(ish) the task class */
 }
 
-.max-height60 {
+.row.max-height60 {
     max-height: 60px !important;
-    background-color: #6F21D5;
-    color: white;
+    background-color: #FFEFFC;
+    color: #010004;
+    border: 1px solid black;
     border-radius: 10px;
+
+    /* Here i need to add the on hover for the web view */
 }
