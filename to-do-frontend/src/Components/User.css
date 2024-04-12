@@ -9,5 +9,11 @@
 
 .task {
     max-width: 95% !important;
-    margin-right: 12px !important; /* This centers(ish) the task class */
+    margin-right: 12px !important;
+    /* This centers(ish) the task class */
+}
+
+.max-height60 {
+    max-height: 60px !important;
+    
 }
