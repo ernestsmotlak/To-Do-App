@@ -96,7 +96,7 @@ const User = () => {
                             <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
 
                                 <div className='container mb-3 no-padding-right'>
-                                {/* border border-primary border-2 rounded-2 */}
+                                    {/* border border-primary border-2 rounded-2 */}
                                     {/* Here is the problem bg-black */}
                                     <div className='row'>
                                         <div className='col-9 border border-danger border-2 border-1 d-flex justify-content-center align-items-center'>
@@ -104,7 +104,7 @@ const User = () => {
                                         </div>
                                         <div className='col-3 border border-success border-2 no-padding'>
                                             <div className='border border-warning border-2'>{task.TaskTime}</div>
-                                            <div className='border border-warning border-2'>{task.TaskDate}</div>
+                                            <div className='border border-warning border-2'>{task.TaskDate.slice(5)}</div>
                                         </div>
                                     </div>
 
