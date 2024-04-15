@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logic from './LogoToDoApp.svg';
+import logoApp from './LogoToDoApp.svg';
 import './LoginForm.css';
 
 const LoginForm = (props) => {
@@ -59,7 +59,7 @@ const LoginForm = (props) => {
   return (
     <div>
       {/* <h2 className='mt-3 mb-3'>To-Do-App</h2> */}
-      <img className='mt-3 mb-3' src={logic} style={{width: '200px', height: 'auto'}} alt='nevem ki se je zgubla'></img>
+      <img className='mt-3 mb-3' src={logoApp} style={{width: '200px', height: 'auto'}} alt='nevem ki se je zgubla'></img>
 
 
       <form className='container' onSubmit={handleSubmit}>
