@@ -9,7 +9,7 @@
 
 .task {
     max-width: 95% !important;
-    margin-right: 12px !important;
+    
     /* This centers(ish) the task class */
 }
 
@@ -21,4 +21,14 @@
     border-radius: 10px;
 
     /* Here i need to add the on hover for the web view */
+}
+
+.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.row.justify-content-center {
+    padding-left: 12px;
+    padding-right: 12px;
 }

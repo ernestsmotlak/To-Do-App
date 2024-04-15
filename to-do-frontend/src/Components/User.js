@@ -81,7 +81,7 @@ const User = () => {
 
     return (
         <div className='container'>
-            <Header />
+            <Header className='custom-header'/>
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {tasks && (

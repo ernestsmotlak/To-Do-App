@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 const Header = () => {
     return (
         <nav className="navbar bg-primary mb-3">
