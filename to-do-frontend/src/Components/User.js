@@ -4,6 +4,7 @@ import AddTask from './AddTask';
 import DeleteButton from './SqlFunctionality/DeleteButton'
 import Update from './SqlFunctionality/Update'
 import './User.css';
+import Header from './Header';
 
 const User = () => {
     const [error, setError] = useState('');
@@ -80,14 +81,11 @@ const User = () => {
 
     return (
         <div className='container'>
+            <Header />
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {tasks && (
                 <div className='row justify-content-center'>
-                    <div className='fw-bold mb-3 mt-3'>
-                        TaskUser: {username}
-                    </div>
-                    {/* <p>Tasks for {fetchedUuid}:</p> */}
                     <div className='task'>
                         {tasks.map((task, index) => (
                             <div key={index}>

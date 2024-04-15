@@ -46,7 +46,7 @@ const AddTask = (props) => {
 
 
     return (
-        <div>
+        <div className='bg-primary'>
             <h2>AddTask</h2>
             Passed username: {passedUsername}
             <br />
