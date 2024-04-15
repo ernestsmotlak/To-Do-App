@@ -39,7 +39,7 @@ const DeleteButton = (props) => {
     };
 
     return (
-        <button onClick={submitDeleteTask}>
+        <button className='btn btn-danger mb-3' onClick={submitDeleteTask}>
             Delete!
             {/* {passedTask} */}
         </button>
