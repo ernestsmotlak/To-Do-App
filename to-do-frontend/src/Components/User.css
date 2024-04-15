@@ -8,8 +8,7 @@
 }
 
 .task {
-    max-width: 95% !important;
-    
+    max-width: 90% !important;
     /* This centers(ish) the task class */
 }
 
