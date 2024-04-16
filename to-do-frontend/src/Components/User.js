@@ -81,7 +81,7 @@ const User = () => {
 
     return (
         <div className='container'>
-            <Header className='custom-header'/>
+            <Header className='custom-header' />
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {tasks && (
@@ -100,7 +100,7 @@ const User = () => {
                                         <div className='col-9  d-flex justify-content-center align-items-center'>
                                             {task.TaskName.length > 49 ? task.TaskName.substring(0, 49) + '...' : task.TaskName}
                                         </div>
-                                        <div className='col-3  no-padding'>
+                                        <div className='col-3 no-padding'>
                                             <div className=''>{task.TaskTime}</div>
                                             <div className=''>{task.TaskDate.slice(5)}</div>
                                         </div>
