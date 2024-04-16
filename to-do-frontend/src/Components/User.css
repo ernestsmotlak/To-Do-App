@@ -13,8 +13,8 @@
 
 .row.max-height60 {
     min-height: 67.5px !important;
-    max-height: 200px !important;
-    /* max-height: 60px !important; */
+    max-height: 68px !important;
+
     background-color: #FFEFFC;
     color: #010004;
     border: 1px solid black;
@@ -33,11 +33,20 @@
     padding-right: 12px;
 }
 
-.col-9.d-flex.justify-content-center.align-items-center {
-    
-}
+.col-9.d-flex.justify-content-center.align-items-center {}
 
 .col-3.no-padding {
     margin-top: 8px;
-    
+
+}
+
+.mb-3.ms-1.btn.btn.btn-secondary {}
+
+.row.max-height60 .col-9 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limit the content to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

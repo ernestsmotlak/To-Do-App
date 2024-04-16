@@ -98,7 +98,7 @@ const User = () => {
                                     {/* Here is the problem bg-black */}
                                     <div className='row max-height60'>
                                         <div className='col-9  d-flex justify-content-center align-items-center'>
-                                            {task.TaskName.length > 49 ? task.TaskName.substring(0, 49) + '...' : task.TaskName}
+                                            {task.TaskName.length > 46 ? task.TaskName.substring(0, 46) + '...' : task.TaskName}
                                         </div>
                                         <div className='col-3 no-padding'>
                                             <div className=''>{task.TaskTime}</div>
