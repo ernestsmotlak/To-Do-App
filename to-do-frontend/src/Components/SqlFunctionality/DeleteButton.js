@@ -39,10 +39,11 @@ const DeleteButton = (props) => {
     };
 
     return (
-        <button className='btn btn-danger mb-3' onClick={submitDeleteTask}>
-            Delete!
-            {/* {passedTask} */}
-        </button>
+        <i
+            className="bi bi-trash-fill custom-right-arrow"
+            style={{ fontSize: 'xx-large', cursor: 'pointer' }}
+            onClick={submitDeleteTask}>
+        </i>
     )
 }
 
