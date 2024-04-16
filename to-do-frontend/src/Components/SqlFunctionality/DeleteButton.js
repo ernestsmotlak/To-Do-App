@@ -43,6 +43,7 @@ const DeleteButton = (props) => {
             className="bi bi-trash-fill custom-right-arrow"
             style={{ fontSize: 'xx-large', cursor: 'pointer' }}
             onClick={submitDeleteTask}>
+                {/* styles for this button are in Header.css */}
         </i>
     )
 }

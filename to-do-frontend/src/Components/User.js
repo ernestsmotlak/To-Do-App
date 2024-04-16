@@ -116,7 +116,7 @@ const User = () => {
                                     taskTime={task.TaskTime}
                                     taskDate={task.TaskDate}
                                 />
-                                <button className='mb-3 ms-1 btn btn btn-secondary' onClick={() => handleUpdateClick(task)}>Update!</button>
+                                <i className='update-button bi bi-arrow-clockwise' onClick={() => handleUpdateClick(task)}></i>
 
                                 {selectedTask === task &&
                                     (<Update

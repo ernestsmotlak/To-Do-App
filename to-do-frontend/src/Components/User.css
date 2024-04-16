@@ -33,20 +33,27 @@
     padding-right: 12px;
 }
 
-.col-9.d-flex.justify-content-center.align-items-center {}
-
 .col-3.no-padding {
     margin-top: 8px;
 
 }
 
-.mb-3.ms-1.btn.btn.btn-secondary {}
+.update-button {
+    background-color: darkgrey;
+    color: chartreuse;
+    margin-bottom: 1rem;
+    margin-left: 0.25rem;
+    cursor: pointer;
+    font-size: xx-large;
 
-.row.max-height60 .col-9 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Limit the content to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    font-size: 27.5px !important;
+}
+
+.update-button:hover {
+    background-color: blue;
 }
