@@ -8,6 +8,25 @@ const AddTask = (props) => {
     const passedUsername = props.username;
     const passedUuid = props.uuid;
 
+    const [inputTypeDate, setInputTypeDate] = useState('text');
+    const [inputTypeTime, setinputTypeTime] = useState('text');
+
+    const handleFocusDate = () => {
+        setInputTypeDate('date');
+    };
+
+    const handleFocusTime = () => {
+        setinputTypeTime('time');
+    };
+
+    const handleBlurDate = () => {
+        setInputTypeDate('text');
+    };
+    const handleBlurTime = () => {
+        setinputTypeTime('text');
+    };
+
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -46,20 +65,29 @@ const AddTask = (props) => {
 
 
     return (
-        <div className='bg-primary'>
+        <div className='bg-danger mt-3 pt-2 pb-3'>
             <h2>AddTask</h2>
-            Passed username: {passedUsername}
-            <br />
-            {/* Passed uuid: {passedUuid} */}
-            <br />
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Task Name: </label>
-                    <input type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
-                    <label>Task Date: </label>
-                    <input type="text" value={taskDate} onChange={(e) => setTaskDate(e.target.value)} />
-                    <label>Task Time: </label>
-                    <input type="text" value={taskTime} onChange={(e) => setTaskTime(e.target.value)} />
+                    <input type="text" placeholder='Task Name' value={taskName} onChange={(e) => setTaskName(e.target.value)} />
+                    <br />
+                    <input
+                        type={inputTypeDate}
+                        placeholder="Date"
+                        value={taskDate}
+                        onChange={(e) => setTaskDate(e.target.value)}
+                        onFocus={handleFocusDate}
+                        onBlur={handleBlurDate}
+                    />
+                    <br />
+                    <input
+                        type={inputTypeTime}
+                        placeholder='Time'
+                        value={taskTime}
+                        onChange={(e) => setTaskTime(e.target.value)}
+                        onFocus={handleFocusTime}
+                        onBlur={handleBlurTime}
+                    />
                 </div>
                 <button type="submit">Save task to db.</button>
             </form>

@@ -40,7 +40,7 @@
 
 .update-button {
     background-color: darkgrey;
-    color: chartreuse;
+    color: black;
     margin-bottom: 1rem;
     margin-left: 0.25rem;
     cursor: pointer;
@@ -55,5 +55,5 @@
 }
 
 .update-button:hover {
-    background-color: blue;
+    background-color: darkgoldenrod;
 }
