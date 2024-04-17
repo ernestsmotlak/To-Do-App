@@ -66,7 +66,7 @@ const AddTask = (props) => {
 
     return (
         <div className='bg-danger mt-3 pt-2 pb-3'>
-            <h2>AddTask</h2>
+            <h2>Add Task</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" placeholder='Task Name' value={taskName} onChange={(e) => setTaskName(e.target.value)} />
@@ -89,7 +89,7 @@ const AddTask = (props) => {
                         onBlur={handleBlurTime}
                     />
                 </div>
-                <button type="submit">Save task to db.</button>
+                <i className='bi bi-plus-square-fill mt-2' onClick={handleSubmit}></i>
             </form>
         </div>
     )

@@ -57,3 +57,19 @@
 .update-button:hover {
     background-color: darkgoldenrod;
 }
+
+/* AddTask styles */
+
+.bi.bi-plus-square-fill.mt-2 {
+    color: black;
+    margin-bottom: 1rem;
+    margin-left: 0.25rem;
+    cursor: pointer;
+    font-size: xx-large;
+
+    font-size: 40.5px !important;
+}
+
+.bi.bi-plus-square-fill.mt-2:hover {
+    color: green;
+}
