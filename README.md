@@ -19,8 +19,8 @@ React, Node.js, Sqlite.
   </div>
 </div>
  ```
-
- - Date input type [here](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_date)
+- Create Footer
+- Change the upper right button into a + (Add new Task button).
 
 ## CSS Next
 - On mobile view on the User.js component the horizontal alignment is not correct.

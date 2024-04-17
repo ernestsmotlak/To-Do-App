@@ -73,3 +73,9 @@
 .bi.bi-plus-square-fill.mt-2:hover {
     color: green;
 }
+
+.mt-3.pt-2.pb-3 {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
