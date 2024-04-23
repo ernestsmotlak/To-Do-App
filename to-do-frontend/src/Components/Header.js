@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import logoApp from './LogoToDoApp.svg';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './Header.css';
-const Header = ({sendToUser}) => {
+const Header = ({ sendToUser }) => {
     const [buttonClicked, setbuttonClicked] = useState(false);
 
     const isButtonClicked = () => {
         setbuttonClicked(true);
-        sendToUser(buttonClicked);
+        sendToUser(true); // Update the state and call the function directly
     }
 
     return (
