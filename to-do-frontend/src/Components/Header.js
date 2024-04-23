@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logoApp from './LogoToDoApp.svg';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useNavigate } from 'react-router-dom';
 import './Header.css';
-const Header = () => {
-    const navigate = useNavigate();
+const Header = ({sendToUser}) => {
+    const [buttonClicked, setbuttonClicked] = useState(false);
 
-    const goToLoginForm = () => {
-        navigate('/');
+    const isButtonClicked = () => {
+        setbuttonClicked(true);
+        sendToUser(buttonClicked);
     }
 
     return (
@@ -20,7 +20,7 @@ const Header = () => {
                         </div>
                         <div className="col d-flex justify-content-end align-items-center">
                             <div>
-                                <i className="bi bi-arrow-left-square-fill custom-right-arrow" style={{ fontSize: 'xx-large', cursor: 'pointer' }} onClick={goToLoginForm}></i>
+                                <i className="bi bi-arrow-left-square-fill custom-right-arrow" style={{ fontSize: 'xx-large', cursor: 'pointer' }} onClick={isButtonClicked}></i>
                             </div>
                         </div>
                     </div>

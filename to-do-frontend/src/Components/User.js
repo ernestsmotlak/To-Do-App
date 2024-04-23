@@ -13,6 +13,12 @@ const User = () => {
     const [username, setUsername] = useState('');
     const [selectedTask, setselectedTask] = useState(null);
 
+    const [addTaskButtonClicked, setaddTaskButtonClicked] = useState(false);
+
+    function isTaskButtonClicked(buttonClicked) {
+        setaddTaskButtonClicked(buttonClicked);
+    };
+
     const fetchTasks = () => {
         showUsersTasks();
     };
@@ -81,8 +87,11 @@ const User = () => {
 
     return (
         <div className='container'>
-            <Header className='custom-header' />
+            <Header className='custom-header' sendToUser={isTaskButtonClicked} />
             {error && <div style={{ color: 'red' }}>{error}</div>}
+
+            {addTaskButtonClicked ? 
+            (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />) : (null)}
 
             {tasks && (
                 <div className='row justify-content-center'>
@@ -132,9 +141,6 @@ const User = () => {
                     </div>
                 </div>
             )}
-
-            <AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />
-
         </div>
     );
 };
