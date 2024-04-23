@@ -65,7 +65,7 @@ const AddTask = (props) => {
 
 
     return (
-        <div className='mt-3 pt-2 pb-2'>
+        <div className='mt-3 pt-2'>
             <h2>Add Task</h2>
             <form onSubmit={handleSubmit}>
                 <div>

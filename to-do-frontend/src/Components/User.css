@@ -74,10 +74,10 @@
     color: green;
 }
 
-.mt-3.pt-2.pb-2 {
+.mt-3.pt-2 {
     border: 1px solid black;
     border-radius: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 
     max-width: 90%;
     justify-items: center;

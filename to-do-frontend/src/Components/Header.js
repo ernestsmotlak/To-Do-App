@@ -3,10 +3,8 @@ import logoApp from './LogoToDoApp.svg';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './Header.css';
 const Header = ({ sendToUser }) => {
-    const [buttonClicked, setbuttonClicked] = useState(false);
 
     const isButtonClicked = () => {
-        setbuttonClicked(true);
         sendToUser(true); // Update the state and call the function directly
     }
 
