@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 
 const AddTask = (props) => {
+
+    // const { sendDataToParent } = props;
+
     const [taskName, setTaskName] = useState('');
     const [taskDate, setTaskDate] = useState('');
     const [taskTime, setTaskTime] = useState('');
@@ -25,7 +28,6 @@ const AddTask = (props) => {
     const handleBlurTime = () => {
         setinputTypeTime('text');
     };
-
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -57,6 +59,9 @@ const AddTask = (props) => {
 
             console.log('Added -> Taskname: ' + taskName + ' , TaskDate: ' + taskDate + ' , TaskTime: ' + taskTime + ' , UID: ' + passedUuid + ' , Username: ' + passedUsername);
             // Fetch all tasks for the user again.
+
+            props.sendDataToParent(false);
+            
             props.fetchTasks();
         } catch (error) {
             console.error('Error adding task:', error.message);

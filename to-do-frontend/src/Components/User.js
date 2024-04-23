@@ -90,8 +90,9 @@ const User = () => {
             <Header className='custom-header' sendToUser={isTaskButtonClicked} />
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
-            {addTaskButtonClicked ? 
-            (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} />) : (null)}
+            {addTaskButtonClicked ?
+                (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} sendDataToParent={setaddTaskButtonClicked} />) : (null)}
+
 
             {tasks && (
                 <div className='row justify-content-center'>
