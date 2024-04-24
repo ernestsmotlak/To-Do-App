@@ -2,9 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 
 const AddTask = (props) => {
-
-    // const { sendDataToParent } = props;
-
     const [taskName, setTaskName] = useState('');
     const [taskDate, setTaskDate] = useState('');
     const [taskTime, setTaskTime] = useState('');
@@ -61,10 +58,11 @@ const AddTask = (props) => {
             // Fetch all tasks for the user again.
 
             props.sendDataToParent(false);
-            
+
             props.fetchTasks();
         } catch (error) {
             console.error('Error adding task:', error.message);
+            props.sendDataToParent(false);
         }
     };
 
