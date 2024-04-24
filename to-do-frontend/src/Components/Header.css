@@ -13,3 +13,11 @@
 .bi.bi-trash-fill.custom-right-arrow:hover {
     color: red;
 }
+
+.bi.bi-patch-plus-fill.custom-right-arrow {
+    font-size: 35px !important;
+}
+
+.bi.bi-patch-plus-fill.custom-right-arrow:hover {
+    color: red;
+}

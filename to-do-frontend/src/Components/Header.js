@@ -3,9 +3,11 @@ import logoApp from './LogoToDoApp.svg';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './Header.css';
 const Header = ({ sendToUser }) => {
+    const [btnClicked, setbtnClicked] = useState(false);
 
     const isButtonClicked = () => {
-        sendToUser(true); // Update the state and call the function directly
+        sendToUser(!btnClicked);
+        setbtnClicked(!btnClicked);
     }
 
     return (
@@ -18,7 +20,7 @@ const Header = ({ sendToUser }) => {
                         </div>
                         <div className="col d-flex justify-content-end align-items-center">
                             <div>
-                                <i className="bi bi-arrow-left-square-fill custom-right-arrow" style={{ fontSize: 'xx-large', cursor: 'pointer' }} onClick={isButtonClicked}></i>
+                                <i className="bi bi-patch-plus-fill custom-right-arrow" style={{ fontSize: 'xx-large', cursor: 'pointer' }} onClick={isButtonClicked}></i>
                             </div>
                         </div>
                     </div>

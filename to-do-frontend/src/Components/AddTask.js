@@ -14,7 +14,7 @@ const AddTask = (props) => {
     const handleFocusDate = () => {
         setInputTypeDate('date');
     };
-
+    
     const handleFocusTime = () => {
         setinputTypeTime('time');
     };

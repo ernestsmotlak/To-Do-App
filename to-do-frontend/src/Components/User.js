@@ -91,7 +91,7 @@ const User = () => {
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
             {addTaskButtonClicked ?
-                (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} sendDataToParent={setaddTaskButtonClicked} />) : (null)}
+                (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} sendDataToParent={isTaskButtonClicked} />) : (null)}
 
 
             {tasks && (
