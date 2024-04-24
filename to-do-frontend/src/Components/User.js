@@ -103,7 +103,7 @@ const User = () => {
                             <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
                             <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
 
-                                <div className='container mb-1 no-padding-right'>
+                                <div className='container mb-2 no-padding-right'>
                                     {/* border border-primary border-2 rounded-2 */}
                                     {/* Here is the problem bg-black */}
                                     <div className='row max-height60'>
@@ -127,7 +127,8 @@ const User = () => {
                                     taskDate={task.TaskDate}
                                 />
                                 <i className='update-button bi bi-arrow-clockwise' onClick={() => handleUpdateClick(task)}></i>
-                                <hr/>
+                                <hr className='dashed'/>
+                                {/* Hr styles in User.css */}
                                 
                                 
 
