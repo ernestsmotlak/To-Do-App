@@ -9,6 +9,7 @@
 
 .task {
     max-width: 90% !important;
+    min-width: 301.5px !important;
 }
 
 .row.max-height60 {
@@ -26,6 +27,10 @@
 .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.container.mb-2.no-padding-right {
+    
 }
 
 .row.justify-content-center {
