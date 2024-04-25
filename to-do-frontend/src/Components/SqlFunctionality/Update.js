@@ -102,7 +102,7 @@ const Update = (props) => {
                             onBlur={handleBlurDate}
                         ></input>
                     </div>
-                    <button className='mb-3 mt-3' type='submit' onClick={sumbitUpdateTask}>Update!</button>
+                    <i className='mt-3 bi bi-check-square-fill' type='submit' onClick={sumbitUpdateTask}></i>
                 </form>
             </div>
         </div>
