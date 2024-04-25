@@ -69,7 +69,7 @@ const AddTask = (props) => {
 
     return (
         <div className='mt-3 pt-2'>
-            <h2>Add Task</h2>
+            <h2 className='mt-2'>Add Task</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" placeholder='Task Name' value={taskName} onChange={(e) => setTaskName(e.target.value)} />
