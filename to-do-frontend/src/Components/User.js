@@ -86,67 +86,67 @@ const User = () => {
     };
 
     return (
-        <div className='container'>
-            <Header className='custom-header' sendToUser={isTaskButtonClicked} />
-            {error && <div style={{ color: 'red' }}>{error}</div>}
+        <div><div className='container'>
+        <Header className='custom-header' sendToUser={isTaskButtonClicked} />
+        {error && <div style={{ color: 'red' }}>{error}</div>}
 
-            {addTaskButtonClicked ?
-                (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} sendDataToParent={isTaskButtonClicked} />) : (null)}
+        {addTaskButtonClicked ?
+            (<AddTask username={username} uuid={fetchedUuid} fetchTasks={fetchTasks} sendDataToParent={isTaskButtonClicked} />) : (null)}
 
 
-            {tasks && (
-                <div className='row justify-content-center'>
-                    <div className='task'>
-                        {tasks.map((task, index) => (
-                            <div key={index}>
-                                {/* <div className='bg-danger-subtle'>Task: {task.TaskName}</div>
-                            <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
-                            <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
+        {tasks && (
+            <div className='row justify-content-center'>
+                <div className='task'>
+                    {tasks.map((task, index) => (
+                        <div key={index}>
+                            {/* <div className='bg-danger-subtle'>Task: {task.TaskName}</div>
+                        <div className='bg-info-subtle'>Time: {task.TaskTime}</div>
+                        <div className='bg-warning-subtle'>Date: {task.TaskDate}</div> */}
 
-                                <div className='container mb-2 no-padding-right'>
-                                    {/* border border-primary border-2 rounded-2 */}
-                                    {/* Here is the problem bg-black */}
-                                    <div className='row max-height60'>
-                                        <div className='col-9  d-flex justify-content-center align-items-center'>
-                                            {task.TaskName.length > 46 ? task.TaskName.substring(0, 46) + '...' : task.TaskName}
-                                        </div>
-                                        <div className='col-3 no-padding'>
-                                            <div className=''>{task.TaskTime}</div>
-                                            <div className=''>{task.TaskDate.slice(5)}</div>
-                                        </div>
+                            <div className='container mb-2 no-padding-right'>
+                                {/* border border-primary border-2 rounded-2 */}
+                                {/* Here is the problem bg-black */}
+                                <div className='row max-height60'>
+                                    <div className='col-9  d-flex justify-content-center align-items-center'>
+                                        {task.TaskName.length > 46 ? task.TaskName.substring(0, 46) + '...' : task.TaskName}
                                     </div>
-
+                                    <div className='col-3 no-padding'>
+                                        <div className=''>{task.TaskTime}</div>
+                                        <div className=''>{task.TaskDate.slice(5)}</div>
+                                    </div>
                                 </div>
 
-                                <DeleteButton
-                                    username={username}
+                            </div>
+
+                            <DeleteButton
+                                username={username}
+                                uuid={fetchedUuid}
+                                fetchTasks={fetchTasks}
+                                taskName={task.TaskName}
+                                taskTime={task.TaskTime}
+                                taskDate={task.TaskDate}
+                            />
+                            <i>&nbsp;</i>
+                            <i className='update-button bi bi-arrow-clockwise' onClick={() => handleUpdateClick(task)}></i>
+                            {selectedTask === task &&
+                                (<Update
                                     uuid={fetchedUuid}
+                                    username={username}
                                     fetchTasks={fetchTasks}
                                     taskName={task.TaskName}
                                     taskTime={task.TaskTime}
                                     taskDate={task.TaskDate}
-                                />
-                                <i>&nbsp;</i>
-                                <i className='update-button bi bi-arrow-clockwise' onClick={() => handleUpdateClick(task)}></i>
-                                {selectedTask === task &&
-                                    (<Update
-                                        uuid={fetchedUuid}
-                                        username={username}
-                                        fetchTasks={fetchTasks}
-                                        taskName={task.TaskName}
-                                        taskTime={task.TaskTime}
-                                        taskDate={task.TaskDate}
-                                    />)}
+                                />)}
 
-                                <hr className='dashed' />
-                                {/* Hr styles in User.css */}
+                            <hr className='dashed' />
+                            {/* Hr styles in User.css */}
 
-                            </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
-            )}
-        </div>
+            </div>
+        )}
+    </div></div>
     );
 };
 
