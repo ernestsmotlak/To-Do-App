@@ -44,6 +44,8 @@ const User = () => {
         setdesktopView(window.outerWidth > 480);
     };
 
+    // handleResize and its' useEffect cause the desktopView state to re render upon resizing the screen.
+
     useEffect(() => {
         if (fetchedUuid !== '') {
             showUsersTasks();
