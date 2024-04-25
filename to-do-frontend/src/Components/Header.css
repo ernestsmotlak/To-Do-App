@@ -1,3 +1,8 @@
+.navbar.bg-dark-subtle.mb-3.border.border-3.border-secondary {
+    max-width: 99% !important; 
+    /* otherwise it hides a part of the right border */
+}
+
 .bi.bi-trash-fill.custom-right-arrow {
     background-color: darkgray;
     padding-top: 3px;

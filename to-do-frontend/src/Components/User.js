@@ -87,7 +87,6 @@ const User = () => {
 
     return (
         <div className='container'>
-            {window.outerWidth}
             <Header className='custom-header' sendToUser={isTaskButtonClicked} />
             {error && <div style={{ color: 'red' }}>{error}</div>}
 
