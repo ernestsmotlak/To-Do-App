@@ -20,7 +20,9 @@ React, Node.js, Sqlite.
 </div>
  ```
 - Create Footer
-- Change the upper right button into a + (Add new Task button).
+- Views: 
+  - Mobile: < 480px
+  - Tablet & Desktop: < 480px 
 
 ## CSS Next
 - On mobile view on the User.js component the horizontal alignment is not correct.
