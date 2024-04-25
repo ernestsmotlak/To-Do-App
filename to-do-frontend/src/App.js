@@ -4,6 +4,7 @@ import LoginForm from './Components/LoginForm';
 import { useEffect, useState } from 'react';
 import NotFound from './Components/NotFound';
 import User from './Components/User';
+import DesktopUser from './Components/DesktopUser';
 
 function App() {
   const [uuidArray, setUuidArray] = useState([]);
@@ -41,7 +42,7 @@ function App() {
             <Route key={index} path={`username/${uniqueUserID}`} element={<User />} />
           ))}
 
-
+          <Route path='/test' element={<DesktopUser />} />
         </Routes>
       </div>
     </Router>
