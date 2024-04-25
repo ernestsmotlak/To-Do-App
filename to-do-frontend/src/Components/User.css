@@ -33,8 +33,10 @@
     }
 
     .row.justify-content-center {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .col-3.no-padding {
@@ -154,8 +156,10 @@
     }
 
     .row.justify-content-center {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .col-3.no-padding {
