@@ -126,8 +126,8 @@ const User = () => {
                                     taskTime={task.TaskTime}
                                     taskDate={task.TaskDate}
                                 />
+                                <i>&nbsp;</i>
                                 <i className='update-button bi bi-arrow-clockwise' onClick={() => handleUpdateClick(task)}></i>
-
                                 {selectedTask === task &&
                                     (<Update
                                         uuid={fetchedUuid}
