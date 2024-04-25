@@ -127,10 +127,6 @@ const User = () => {
                                     taskDate={task.TaskDate}
                                 />
                                 <i className='update-button bi bi-arrow-clockwise' onClick={() => handleUpdateClick(task)}></i>
-                                <hr className='dashed'/>
-                                {/* Hr styles in User.css */}
-                                
-                                
 
                                 {selectedTask === task &&
                                     (<Update
@@ -141,7 +137,10 @@ const User = () => {
                                         taskTime={task.TaskTime}
                                         taskDate={task.TaskDate}
                                     />)}
-                                
+
+                                <hr className='dashed' />
+                                {/* Hr styles in User.css */}
+
                             </div>
                         ))}
                     </div>

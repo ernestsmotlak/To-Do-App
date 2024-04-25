@@ -42,14 +42,31 @@ const Update = (props) => {
         }
     };
 
+    const [inputTypeDate, setInputTypeDate] = useState('text');
+    const [inputTypeTime, setinputTypeTime] = useState('text');
+
+    const handleFocusDate = () => {
+        setInputTypeDate('date');
+    };
+
+    const handleFocusTime = () => {
+        setinputTypeTime('time');
+    };
+
+    const handleBlurDate = () => {
+        setInputTypeDate('text');
+    };
+    const handleBlurTime = () => {
+        setinputTypeTime('text');
+    };
+
 
     return (
-        <div>
-            <h2>Update</h2>
+        <div className='update-task mt-2'>
+            <h2 className='mt-3'>Update Task</h2>
             <div>
                 <form>
                     <div>
-                        <label>TaskName:</label>
                         <input type='text'
                             placeholder={passedTask}
                             value={newTaskName}
@@ -60,28 +77,32 @@ const Update = (props) => {
                         ></input>
                     </div>
                     <div>
-                        <label>TaskTime:</label>
-                        <input type='time'
-                            placeholder={passedTime}
+                        <input
+                            type={inputTypeTime}
+                            placeholder='Time'
                             value={newTaskTime}
                             onChange={(e) => {
                                 const tempTaskTime = e.target.value;
                                 setnewTaskTime(tempTaskTime !== '' ? tempTaskTime : passedTime);
                             }}
+                            onFocus={handleFocusTime}
+                            onBlur={handleBlurTime}
                         ></input>
                     </div>
                     <div>
-                        <label>TaskDate:</label>
-                        <input type='date'
-                            placeholder={passedDate}
+                        <input
+                            type={inputTypeDate}
+                            placeholder='Date'
                             value={newTaskDate}
                             onChange={(e) => {
                                 const tempTaskDate = e.target.value;
                                 setnewTaskDate(tempTaskDate !== '' ? tempTaskDate : passedDate);
                             }}
+                            onFocus={handleFocusDate}
+                            onBlur={handleBlurDate}
                         ></input>
                     </div>
-                    <button type='submit' onClick={sumbitUpdateTask}>Update!</button>
+                    <button className='mb-3 mt-3' type='submit' onClick={sumbitUpdateTask}>Update!</button>
                 </form>
             </div>
         </div>

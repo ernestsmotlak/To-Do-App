@@ -88,3 +88,10 @@
 .dashed {
     border-top: 2px solid;
 }
+
+/* Update.js styles */
+
+.update-task {
+    border: 1px solid black;
+    border-radius: 10px;
+}
