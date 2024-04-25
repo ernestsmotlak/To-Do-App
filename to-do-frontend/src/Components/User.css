@@ -1,115 +1,237 @@
-.no-padding {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+@media (max-width: 480px) {
+
+    .no-padding {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .no-padding-right {
+        padding-right: 0 !important;
+    }
+
+    .task {
+        max-width: 40% !important;
+        /* max-width: 90% !important; */
+        min-width: 301.5px !important;
+    }
+
+    .row.max-height60 {
+        min-height: 67.5px !important;
+        max-height: 68px !important;
+
+        background-color: #FFEFFC;
+        color: #010004;
+        border: 1px solid black;
+        border-radius: 10px;
+
+        /* Here i need to add the on hover for the web view */
+    }
+
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .row.justify-content-center {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .col-3.no-padding {
+        margin-top: 8px;
+
+    }
+
+    .update-button {
+        background-color: darkgrey;
+        color: black;
+        margin-bottom: 1rem;
+        margin-left: 0.25rem;
+        cursor: pointer;
+        font-size: xx-large;
+
+        padding-top: 3px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        font-size: 27.5px !important;
+    }
+
+    .update-button:hover {
+        background-color: darkgoldenrod;
+    }
+
+    /* AddTask styles */
+
+    .bi.bi-plus-square-fill.mt-2 {
+        color: black;
+        margin-bottom: 1rem;
+        margin-left: 0.25rem;
+        cursor: pointer;
+        font-size: xx-large;
+
+        font-size: 40.5px !important;
+    }
+
+    .bi.bi-plus-square-fill.mt-2:hover {
+        color: green;
+    }
+
+    .mt-3.pt-2 {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-bottom: 30px;
+
+        /* max-width: 90%; */
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        max-width: 40% !important;
+        min-width: 301.5px !important;
+    }
+
+    .dashed {
+        border-top: 2px solid;
+    }
+
+    /* Update.js styles */
+
+    .update-task {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .bi.bi-check-square-fill {
+        color: black;
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-left: 0.25rem;
+        cursor: pointer;
+        font-size: xx-large;
+
+        font-size: 40.5px !important;
+    }
 }
 
-.no-padding-right {
-    padding-right: 0 !important;
-}
+@media (min-width: 481px) {
+    .row.justify-content-center {
+        background-color: honeydew;
 
-.task {
-    max-width: 40% !important;
-    /* max-width: 90% !important; */
-    min-width: 301.5px !important;
-}
+    }
 
-.row.max-height60 {
-    min-height: 67.5px !important;
-    max-height: 68px !important;
+    .no-padding {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
 
-    background-color: #FFEFFC;
-    color: #010004;
-    border: 1px solid black;
-    border-radius: 10px;
+    .no-padding-right {
+        padding-right: 0 !important;
+    }
 
-    /* Here i need to add the on hover for the web view */
-}
+    .task {
+        max-width: 40% !important;
+        /* max-width: 90% !important; */
+        min-width: 301.5px !important;
+    }
 
-.container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
+    .row.max-height60 {
+        min-height: 67.5px !important;
+        max-height: 68px !important;
 
-.container.mb-2.no-padding-right {}
+        background-color: #FFEFFC;
+        color: #010004;
+        border: 1px solid black;
+        border-radius: 10px;
 
-.row.justify-content-center {
-    padding-left: 12px;
-    padding-right: 12px;
-}
+        /* Here i need to add the on hover for the web view */
+    }
 
-.col-3.no-padding {
-    margin-top: 8px;
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 
-}
+    .row.justify-content-center {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
-.update-button {
-    background-color: darkgrey;
-    color: black;
-    margin-bottom: 1rem;
-    margin-left: 0.25rem;
-    cursor: pointer;
-    font-size: xx-large;
+    .col-3.no-padding {
+        margin-top: 8px;
 
-    padding-top: 3px;
-    padding-bottom: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 5px;
-    font-size: 27.5px !important;
-}
+    }
 
-.update-button:hover {
-    background-color: darkgoldenrod;
-}
+    .update-button {
+        background-color: darkgrey;
+        color: black;
+        margin-bottom: 1rem;
+        margin-left: 0.25rem;
+        cursor: pointer;
+        font-size: xx-large;
 
-/* AddTask styles */
+        padding-top: 3px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        font-size: 27.5px !important;
+    }
 
-.bi.bi-plus-square-fill.mt-2 {
-    color: black;
-    margin-bottom: 1rem;
-    margin-left: 0.25rem;
-    cursor: pointer;
-    font-size: xx-large;
+    .update-button:hover {
+        background-color: darkgoldenrod;
+    }
 
-    font-size: 40.5px !important;
-}
+    /* AddTask styles */
 
-.bi.bi-plus-square-fill.mt-2:hover {
-    color: green;
-}
+    .bi.bi-plus-square-fill.mt-2 {
+        color: black;
+        margin-bottom: 1rem;
+        margin-left: 0.25rem;
+        cursor: pointer;
+        font-size: xx-large;
 
-.mt-3.pt-2 {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 30px;
+        font-size: 40.5px !important;
+    }
 
-    /* max-width: 90%; */
-    justify-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    .bi.bi-plus-square-fill.mt-2:hover {
+        color: green;
+    }
 
-    max-width: 40% !important;
-    min-width: 301.5px !important;
-}
+    .mt-3.pt-2 {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-bottom: 30px;
 
-.dashed {
-    border-top: 2px solid;
-}
+        /* max-width: 90%; */
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
 
-/* Update.js styles */
+        max-width: 40% !important;
+        min-width: 301.5px !important;
+    }
 
-.update-task {
-    border: 1px solid black;
-    border-radius: 10px;
-}
+    .dashed {
+        border-top: 2px solid;
+    }
 
-.bi.bi-check-square-fill {
-    color: black;
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-    margin-left: 0.25rem;
-    cursor: pointer;
-    font-size: xx-large;
+    /* Update.js styles */
 
-    font-size: 40.5px !important;
+    .update-task {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .bi.bi-check-square-fill {
+        color: black;
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-left: 0.25rem;
+        cursor: pointer;
+        font-size: xx-large;
+
+        font-size: 40.5px !important;
+    }
 }
