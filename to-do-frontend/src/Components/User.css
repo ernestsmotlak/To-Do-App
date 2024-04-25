@@ -8,7 +8,8 @@
 }
 
 .task {
-    max-width: 90% !important;
+    max-width: 40% !important;
+    /* max-width: 90% !important; */
     min-width: 301.5px !important;
 }
 
