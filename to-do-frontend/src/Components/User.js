@@ -100,7 +100,8 @@ const User = () => {
     };
 
     const str = 'I am going to try to put this shitty database on my server, if it breaks, it breaks, what can you do hehe. what the fuck else am i supposed to do. I';
-    const strLen = str.length;
+    const str2 = 'I am going to try to put this shitty database on my server, if it breaks';
+    const strLen = str2.length;
 
     return (
         <div>
@@ -108,7 +109,7 @@ const User = () => {
                 <div className='container'>
                     Hallo Kurt!!!
                     < br/>
-                    {148} {window.outerWidth}
+                    {strLen} {window.innerWidth}
                     <Header className='custom-header' sendToUser={isTaskButtonClicked} />
                     {error && <div style={{ color: 'red' }}>{error}</div>}
 
@@ -131,7 +132,7 @@ const User = () => {
                                             <div className='row max-height60'>
                                                 <div className='col-9  d-flex justify-content-center align-items-center'>
                                                     {task.TaskName.length > 148 ? task.TaskName.substring(0, 145) + '...' : task.TaskName}
-                                                    
+                                                    {/* {(window.innerWidth < 930 && task.TaskName.length > 50) ? task.TaskName.substring(0, 70) + '...' : task.TaskName } */}
                                                 </div>
                                                 <div className='col-3 no-padding'>
                                                     <div className=''>{task.TaskTime}</div>
