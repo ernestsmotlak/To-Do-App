@@ -250,4 +250,12 @@
 
         font-size: 40.5px !important;
     }
+
+    .update-task.mt-2:hover {
+        background-color: aliceblue;
+    }
+
+    .task-name:hover {
+        background-color: black;
+    }
 }

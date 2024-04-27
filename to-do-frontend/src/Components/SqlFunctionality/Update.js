@@ -67,7 +67,7 @@ const Update = (props) => {
             <div>
                 <form>
                     <div>
-                        <input type='text'
+                        <input className='task-name' type='text'
                             placeholder={passedTask}
                             value={newTaskName}
                             onChange={(e) => {
