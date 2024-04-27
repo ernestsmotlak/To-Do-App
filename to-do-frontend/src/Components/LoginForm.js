@@ -59,10 +59,10 @@ const LoginForm = (props) => {
   return (
     <div>
       {/* <h2 className='mt-3 mb-3'>To-Do-App</h2> */}
-      <img className='mt-3 mb-3' src={logoApp} style={{width: '200px', height: 'auto'}} alt='nevem ki se je zgubla'></img>
+      <img className='mt-5 mb-3' src={logoApp} style={{width: '200px', height: 'auto'}} alt='nevem ki se je zgubla'></img>
 
 
-      <form className='container' onSubmit={handleSubmit}>
+      <form className='container login-form' onSubmit={handleSubmit}>
         <div className='row justify-content-center'>
           <label className='form-label mt-2'>Username:</label>
           <input className='form-control-lg w-75 mb-3' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />

@@ -1,3 +1,7 @@
 .loginForm {
     font-size: xx-large;
 }
+
+.container.login-form {
+    max-width: 360px !important;
+}
