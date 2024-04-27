@@ -1,7 +1,8 @@
-.navbar.bg-dark-subtle.mb-3.border.border-3.border-secondary {
+.navbar.mb-3.border.border-3.border-secondary {
     min-width: 100% !important;
     max-width: 100% !important;
     
+    background-color: var(--second-color);
 }
 
 .bi.bi-trash-fill.custom-right-arrow {

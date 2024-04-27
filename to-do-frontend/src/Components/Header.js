@@ -11,7 +11,7 @@ const Header = ({ sendToUser }) => {
     }
 
     return (
-        <nav className="navbar bg-dark-subtle mb-3 border border-3 border-secondary">
+        <nav className="navbar mb-3 border border-3 border-secondary">
             <div className="container-fluid">
                 <div className="container">
                     <div className="row">
