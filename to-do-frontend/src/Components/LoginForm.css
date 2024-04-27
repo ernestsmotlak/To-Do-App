@@ -5,3 +5,15 @@
 .container.login-form {
     max-width: 360px !important;
 }
+
+body {
+    background-color: var(--background) !important; 
+}
+
+.form-control-lg.w-75.mb-3.login-form {
+    background-color: var(--input-color);
+}
+
+.form-control-lg.w-75.login-form {
+    background-color: var(--input-color);
+}
