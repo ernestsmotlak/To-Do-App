@@ -121,10 +121,7 @@
 
 @media (min-width: 481px) {
 
-    .col-9.d-flex.justify-content-center.align-items-center {}
-
-    .row.justify-content-center {
-        /* background-color: honeydew; */
+    .col-9.d-flex.justify-content-center.align-items-center {
 
     }
 
@@ -138,8 +135,8 @@
     }
 
     .task {
-        max-width: 40% !important;
-
+        
+        max-width: 30% !important;
         /* max-width: 90% !important; */
 
         min-width: 301.5px !important;
@@ -215,6 +212,7 @@
     }
 
     .mt-3.pt-2 {
+        width: 28.2%;
         border: 1px solid black;
         border-radius: 10px;
         margin-bottom: 30px;

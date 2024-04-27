@@ -14,7 +14,7 @@ const User = () => {
     const [selectedTask, setselectedTask] = useState(null);
     const [addTaskButtonClicked, setaddTaskButtonClicked] = useState(false);
 
-    const [desktopView, setdesktopView] = useState(window.outerWidth > 480);
+    const [desktopView, setdesktopView] = useState(window.outerWidth > 650);
 
     function isTaskButtonClicked(buttonClicked) {
         setaddTaskButtonClicked(buttonClicked);
@@ -41,7 +41,7 @@ const User = () => {
     }, []);
 
     const handleResize = () => {
-        setdesktopView(window.outerWidth > 480);
+        setdesktopView(window.outerWidth > 650);
     };
 
     // handleResize and its' useEffect cause the desktopView state to re render upon resizing the screen.
@@ -125,9 +125,6 @@ const User = () => {
         <div>
             {desktopView ? (
                 <div className='container'>
-                    Hallo Kurtovich!!!
-                    < br />
-                    {strLen} {window.innerWidth}
                     <Header className='custom-header' sendToUser={isTaskButtonClicked} />
                     {error && <div style={{ color: 'red' }}>{error}</div>}
 
@@ -136,7 +133,7 @@ const User = () => {
 
 
                     {tasks && (
-                        <div className='row justify-content-center'>
+                        <div className='row justify-content-center desktop'>
                             <div className='task'>
                                 {tasks.map((task, index) => (
                                     <div key={index}>

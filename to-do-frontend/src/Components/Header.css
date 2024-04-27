@@ -1,7 +1,7 @@
 .navbar.bg-dark-subtle.mb-3.border.border-3.border-secondary {
     min-width: 100% !important;
     max-width: 100% !important;
-    /* otherwise it hides a part of the right border */
+    
 }
 
 .bi.bi-trash-fill.custom-right-arrow {
