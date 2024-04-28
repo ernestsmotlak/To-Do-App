@@ -253,12 +253,11 @@
     .update-task.mt-2 {
         border: 1px solid black;
         border-radius: 10px;
-        
+        background-color: var(--second-color);
     }
 
     .update-task.mt-2:hover {
         box-shadow: 5px 10px #888888;
-        border-radius: 10px;
         background-color: var(--second-color);
     }
 
@@ -269,15 +268,35 @@
         margin-left: 0.25rem;
         cursor: pointer;
         font-size: xx-large;
-
         font-size: 40.5px !important;
     }
+/* 
+    .update-task.mt-2:hover .task-name {
+        background-color: blue !important;
+    } */
 
-    .update-task.mt-2:hover {
-        /* background-color: aliceblue; */
+
+    .task-name {
+        background-color: var(--background);
     }
 
     .task-name:hover {
-        background-color: black;
+        background-color: gainsboro;
+    }
+
+    .task-time {
+        background-color: var(--background);
+    }
+
+    .task-time:hover {
+        background-color: gainsboro;
+    }
+
+    .task-date {
+        background-color: var(--background);
+    }
+
+    .task-date:hover {
+        background-color: gainsboro;
     }
 }

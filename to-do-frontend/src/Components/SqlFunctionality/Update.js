@@ -78,6 +78,7 @@ const Update = (props) => {
                     </div>
                     <div>
                         <input
+                            className='task-time'
                             type={inputTypeTime}
                             placeholder='Time'
                             value={newTaskTime}
@@ -91,6 +92,7 @@ const Update = (props) => {
                     </div>
                     <div>
                         <input
+                        className='task-date'
                             type={inputTypeDate}
                             placeholder='Date'
                             value={newTaskDate}
