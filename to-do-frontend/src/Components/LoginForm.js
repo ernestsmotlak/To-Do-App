@@ -59,7 +59,7 @@ const LoginForm = (props) => {
   return (
     <div>
       {/* <h2 className='mt-3 mb-3'>To-Do-App</h2> */}
-      <img className='mt-5 mb-3' src={logoApp} style={{width: '200px', height: 'auto'}} alt='nevem ki se je zgubla'></img>
+      <img className='mt-5 mb-3' src={logoApp} style={{ width: '200px', height: 'auto' }} alt='nevem ki se je zgubla'></img>
 
 
       <form className='container login-form' onSubmit={handleSubmit}>
@@ -72,9 +72,11 @@ const LoginForm = (props) => {
           <input className='form-control-lg w-75 login-form' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button
-          className='mt-3 mb-3 btn btn-primary'
+          className='login-form-button mt-3 mb-3'
           type="submit"
-        >Login</button>
+        >
+          Login
+        </button>
       </form>
 
       {loginStatus !== null && (

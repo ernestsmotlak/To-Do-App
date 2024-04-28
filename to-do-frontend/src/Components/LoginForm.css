@@ -7,13 +7,43 @@
 }
 
 body {
-    background-color: var(--background) !important; 
+    background-color: var(--background) !important;
 }
 
 .form-control-lg.w-75.mb-3.login-form {
     background-color: var(--input-color);
 }
 
+.form-control-lg.w-75.mb-3.login-form:hover {
+    background-color: gainsboro;
+
+}
+
 .form-control-lg.w-75.login-form {
     background-color: var(--input-color);
+}
+
+.form-control-lg.w-75.login-form:hover {
+    background-color: gainsboro;
+}
+
+.login-form-button.mt-3.mb-3 {
+    background-color: var(--updateAndHeaderBtn-color) !important;
+    color: var(--second-color);
+    /* background-color: #e5c79b !important; */
+    border: 0px !important;
+    border-radius: 5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    font-size: large;
+}
+
+.login-form-button.mt-3.mb-3:hover {
+    background-color: var(--twoButtons-color) !important;
+    box-shadow: 2.2px 3px 4.3px hsl(0deg 0% 0% / 0.43);
+    border: 2px solid black !important;
 }
