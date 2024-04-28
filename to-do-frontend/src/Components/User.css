@@ -206,7 +206,8 @@
     .update-button:hover {
         background-color: #e5c79b;
         border: 2px solid black !important;
-        color: #8F3854;
+        /* color: #8F3854; */
+        color: var(--twoButtons-color);
     }
 
     /* AddTask styles */
@@ -252,6 +253,13 @@
     .update-task {
         border: 1px solid black;
         border-radius: 10px;
+        
+    }
+
+    .update-task:hover {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: var(--second-color);
     }
 
     .bi.bi-check-square-fill {
@@ -265,9 +273,9 @@
         font-size: 40.5px !important;
     }
 
-    .update-task.mt-2:hover {
+    /* .update-task.mt-2:hover {
         background-color: aliceblue;
-    }
+    } */
 
     .task-name:hover {
         background-color: black;

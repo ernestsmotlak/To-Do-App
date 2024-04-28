@@ -18,7 +18,7 @@
 }
 
 .bi.bi-trash-fill.custom-right-arrow:hover {
-    color: #8F3854;
+    color: var(--twoButtons-color);
     background-color: #e5c79b;
     border: 2px solid black !important;
 }
@@ -29,7 +29,7 @@
 }
 
 .bi.bi-patch-plus-fill.custom-right-arrow:hover {
-    color: #8F3854;
+    color: var(--twoButtons-color);
 }
 
 /* https://palettes.shecodes.io/palettes/568 */
