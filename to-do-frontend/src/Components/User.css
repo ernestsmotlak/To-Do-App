@@ -121,9 +121,7 @@
 
 @media (min-width: 481px) {
 
-    .col-9.d-flex.justify-content-center.align-items-center {
-
-    }
+    .col-9.d-flex.justify-content-center.align-items-center {}
 
     .no-padding {
         padding-right: 0 !important;
@@ -135,7 +133,7 @@
     }
 
     .task {
-        
+
         max-width: 30% !important;
         /* max-width: 90% !important; */
 
@@ -146,7 +144,7 @@
         min-height: 67.5px !important;
         max-height: 68px !important;
 
-        background-color: var(--second-color);
+        background-color: var(--third-color);
         color: #010004;
         border: 1px solid black;
         border-radius: 10px;
@@ -188,7 +186,9 @@
     }
 
     .update-button {
-        background-color: darkgrey;
+        /* background-color: var(--second-color); */
+        background-color: var(--button-background);
+        /* border: black solid 1px !important; */
         color: black;
         margin-bottom: 1rem;
         margin-left: 0.25rem;
@@ -204,7 +204,8 @@
     }
 
     .update-button:hover {
-        background-color: darkgoldenrod;
+        background-color: #e5c79b;
+        border: 2px solid black !important;
     }
 
     /* AddTask styles */
