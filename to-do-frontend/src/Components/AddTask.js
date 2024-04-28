@@ -14,7 +14,7 @@ const AddTask = (props) => {
     const handleFocusDate = () => {
         setInputTypeDate('date');
     };
-    
+
     const handleFocusTime = () => {
         setinputTypeTime('time');
     };
@@ -72,9 +72,10 @@ const AddTask = (props) => {
             <h2 className='mt-2'>Add Task</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <input type="text" placeholder='Task Name' value={taskName} onChange={(e) => setTaskName(e.target.value)} />
+                    <input className='task-name' type="text" placeholder='Task Name' value={taskName} onChange={(e) => setTaskName(e.target.value)} />
                     <br />
                     <input
+                        className='task-date'
                         type={inputTypeDate}
                         placeholder="Date"
                         value={taskDate}
@@ -84,6 +85,7 @@ const AddTask = (props) => {
                     />
                     <br />
                     <input
+                        className='task-time'
                         type={inputTypeTime}
                         placeholder='Time'
                         value={taskTime}
