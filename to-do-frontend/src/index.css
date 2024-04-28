@@ -7,6 +7,8 @@
   --input-color: #fcf9f7;
   --twoButtons-color: #8F3854;
   --updateAndHeaderBtn-color: #AB516C;
+
+  --body-shadow: 2.2px 4.3px 4.3px hsl(0deg 0% 0% / 0.43);
 }
 
 body {
