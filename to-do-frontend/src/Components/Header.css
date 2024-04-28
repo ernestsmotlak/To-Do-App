@@ -18,17 +18,18 @@
 }
 
 .bi.bi-trash-fill.custom-right-arrow:hover {
-    color: crimson;
+    color: #8F3854;
     background-color: #e5c79b;
     border: 2px solid black !important;
 }
 
 .bi.bi-patch-plus-fill.custom-right-arrow {
     font-size: 35px !important;
+    color: #AB516C;
 }
 
 .bi.bi-patch-plus-fill.custom-right-arrow:hover {
-    color: red;
+    color: #8F3854;
 }
 
 /* https://palettes.shecodes.io/palettes/568 */

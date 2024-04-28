@@ -206,6 +206,7 @@
     .update-button:hover {
         background-color: #e5c79b;
         border: 2px solid black !important;
+        color: #8F3854;
     }
 
     /* AddTask styles */
