@@ -25,7 +25,7 @@
 
 .bi.bi-patch-plus-fill.custom-right-arrow {
     font-size: 35px !important;
-    color: #AB516C;
+    color: var(--updateAndHeaderBtn-color);
 }
 
 .bi.bi-patch-plus-fill.custom-right-arrow:hover {

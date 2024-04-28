@@ -262,13 +262,17 @@
     }
 
     .bi.bi-check-square-fill {
-        color: black;
+        color: var(--updateAndHeaderBtn-color);
         margin-bottom: 0px !important;
         margin-top: 0px !important;
         margin-left: 0.25rem;
         cursor: pointer;
         font-size: xx-large;
         font-size: 40.5px !important;
+    }
+
+    .bi.bi-check-square-fill:hover {
+        color: var(--twoButtons-color);
     }
 /* 
     .update-task.mt-2:hover .task-name {
