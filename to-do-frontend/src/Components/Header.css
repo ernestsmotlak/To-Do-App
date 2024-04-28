@@ -16,13 +16,15 @@
 
     font-size: 27.5px !important;
 
+    color: var(--third-color);
+
 }
 
 .bi.bi-trash-fill.custom-right-arrow:hover {
-    color: var(--twoButtons-color);
+    color: var(--third-color);
     /* background-color: #e5c79b; */
-    background-color: var(--second-color);
-    border: 2px solid black !important;
+    background-color: var(--twoButtons-color);
+    /* border: 2px solid black !important; */
 }
 
 .bi.bi-patch-plus-fill.custom-right-arrow {
