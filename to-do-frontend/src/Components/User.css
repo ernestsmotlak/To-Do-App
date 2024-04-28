@@ -250,14 +250,14 @@
 
     /* Update.js styles */
 
-    .update-task {
+    .update-task.mt-2 {
         border: 1px solid black;
         border-radius: 10px;
         
     }
 
-    .update-task:hover {
-        border: 1px solid black;
+    .update-task.mt-2:hover {
+        box-shadow: 5px 10px #888888;
         border-radius: 10px;
         background-color: var(--second-color);
     }
@@ -273,9 +273,9 @@
         font-size: 40.5px !important;
     }
 
-    /* .update-task.mt-2:hover {
-        background-color: aliceblue;
-    } */
+    .update-task.mt-2:hover {
+        /* background-color: aliceblue; */
+    }
 
     .task-name:hover {
         background-color: black;
