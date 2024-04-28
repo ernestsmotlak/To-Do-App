@@ -213,7 +213,7 @@
     /* AddTask styles */
 
     .bi.bi-plus-square-fill.mt-2 {
-        color: black;
+        color: var(--updateAndHeaderBtn-color);
         margin-bottom: 1rem;
         margin-left: 0.25rem;
         cursor: pointer;
@@ -223,7 +223,7 @@
     }
 
     .bi.bi-plus-square-fill.mt-2:hover {
-        color: green;
+        color: var(--twoButtons-color);
     }
 
     .mt-3.pt-2 {
