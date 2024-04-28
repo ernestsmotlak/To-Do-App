@@ -146,7 +146,19 @@
         min-height: 67.5px !important;
         max-height: 68px !important;
 
-        background-color: #FFEFFC;
+        background-color: var(--second-color);
+        color: #010004;
+        border: 1px solid black;
+        border-radius: 10px;
+
+        /* Here i need to add the on hover for the web view */
+    }
+
+    .row.max-height60:hover {
+        min-height: 67.5px !important;
+        max-height: 68px !important;
+
+        background-color: var(--fourth-color);
         color: #010004;
         border: 1px solid black;
         border-radius: 10px;
