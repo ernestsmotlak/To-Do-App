@@ -63,7 +63,7 @@ const Update = (props) => {
 
     return (
         <div className='update-task mt-2'>
-            <h2 className='mt-3'>Update Task</h2>
+            <h2 className='mt-3 update-header'>Update Task</h2>
             <div>
                 <form>
                     <div>

@@ -99,6 +99,11 @@
 
     /* AddTask styles */
 
+    .mt-2.header-add-update-task {
+        font-weight: 600;
+        color: var(--twoButtons-color);
+    }
+
     .bi.bi-plus-square-fill.mt-2 {
         color: var(--updateAndHeaderBtn-color);
         margin-bottom: 1rem;
@@ -164,6 +169,11 @@
     }
 
     /* Update.js styles */
+
+    .mt-3.update-header {
+        font-weight: 600;
+        color: var(--twoButtons-color);
+    }
 
     .update-task.mt-2 {
         border: 1px solid black;
@@ -323,6 +333,11 @@
 
     /* AddTask styles */
 
+    .mt-2.header-add-update-task {
+        font-weight: 600;
+        color: var(--twoButtons-color);
+    }
+
     .bi.bi-plus-square-fill.mt-2 {
         color: var(--updateAndHeaderBtn-color);
         margin-bottom: 1rem;
@@ -388,6 +403,11 @@
     }
 
     /* Update.js styles */
+
+    .mt-3.update-header {
+        font-weight: 600;
+        color: var(--twoButtons-color);
+    }
 
     .update-task.mt-2 {
         border: 1px solid black;
