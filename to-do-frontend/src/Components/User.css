@@ -186,9 +186,9 @@
     }
 
     .update-button {
-        /* background-color: var(--button-background); */
+
         background-color: var(--updateAndHeaderBtn-color);
-        /* color: var(--updateAndHeaderBtn-color); */
+        color: var(--third-color);
 
         margin-bottom: 1rem;
         margin-left: 0.25rem;
@@ -207,11 +207,11 @@
 
     .update-button:hover {
         /* background-color: #e5c79b; */
-        background-color: var(--second-color);
-        border: 2px solid black !important;
+        color: var(--third-color) !important;
+        background-color: var(--twoButtons-color);
         /* color: #8F3854; */
         color: var(--twoButtons-color);
-        
+
     }
 
     /* AddTask styles */
