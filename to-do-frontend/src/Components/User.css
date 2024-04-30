@@ -133,7 +133,6 @@
     }
 
     .task {
-
         max-width: 30% !important;
         /* max-width: 90% !important; */
 
@@ -141,6 +140,7 @@
     }
 
     .row.max-height60 {
+        box-shadow: var(--body-shadow);
         min-height: 67.5px !important;
         max-height: 68px !important;
 
@@ -161,7 +161,8 @@
         border: 1px solid black;
         border-radius: 10px;
 
-        /* Here i need to add the on hover for the web view */
+        box-shadow: 5px 7.5px 5px #888888;
+
     }
 
     .container {
@@ -202,6 +203,8 @@
         padding-right: 5px;
         border-radius: 5px;
         font-size: 27.5px !important;
+
+        box-shadow: var(--body-shadow);
 
     }
 
