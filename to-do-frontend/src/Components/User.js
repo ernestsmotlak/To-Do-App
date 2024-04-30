@@ -124,8 +124,7 @@ const User = () => {
     return (
         <div>
             {desktopView ? (
-                <div className='container'>Dodaj senco pousod. On hover dodaj bolj močno senco. <br />
-                Also, dodaj shadow povsod, on hover stronger shadow.
+                <div className='container'>
                     <Header className='custom-header' sendToUser={isTaskButtonClicked} />
                     {error && <div style={{ color: 'red' }}>{error}</div>}
 
