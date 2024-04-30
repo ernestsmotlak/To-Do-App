@@ -187,6 +187,7 @@ const User = () => {
                 </div>
             ) : (
                 <div className='container'>
+                    Less than 650px
                     <Header className='custom-header' sendToUser={isTaskButtonClicked} />
                     {error && <div style={{ color: 'red' }}>{error}</div>}
 
