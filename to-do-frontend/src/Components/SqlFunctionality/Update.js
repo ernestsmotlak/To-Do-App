@@ -14,7 +14,7 @@ const Update = (props) => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/api/updateTask', {
+            const response = await fetch('http://84.247.184.37:3000/api/updateTask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

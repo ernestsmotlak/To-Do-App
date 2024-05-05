@@ -25,9 +25,12 @@ const User = () => {
     };
 
     const fetchUuid = () => {
-        var temp = window.location.href;
-        setFetchedUuID(temp.replace('http://localhost:3006/username/', ''));
+        const url = window.location.href;
+        const uuidIndex = url.lastIndexOf('/') + 1;
+        const uuid = url.substring(uuidIndex);
+        setFetchedUuID(uuid);
     };
+    
 
     useEffect(() => {
         fetchUuid();
@@ -59,7 +62,7 @@ const User = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/userTasks', {
+            const response = await fetch('http://84.247.184.37:3000/api/userTasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchAllUserIDs = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/uuid');
+        const response = await fetch('http://84.247.184.37:3000/api/uuid');
 
         if (!response.ok) {
           throw new Error('Failed to fetch usernames.');
