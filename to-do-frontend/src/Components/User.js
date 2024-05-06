@@ -30,7 +30,7 @@ const User = () => {
         const uuid = url.substring(uuidIndex);
         setFetchedUuID(uuid);
     };
-    
+
 
     useEffect(() => {
         fetchUuid();
