@@ -62,7 +62,7 @@ const User = () => {
         }
 
         try {
-            const response = await fetch('http://84.247.184.37:3000/api/userTasks', {
+            const response = await fetch('http://localhost:3000/api/userTasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -30,7 +30,7 @@ const AddTask = (props) => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://84.247.184.37:3000/api/addTask', {
+            const response = await fetch('http://localhost:3000/api/addTask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
