@@ -19,6 +19,13 @@ const db = new sqlite3.Database('sqlDataBase/Baza.db', sqlite3.OPEN_READWRITE, (
 
 app.use(bodyParser.json());
 
+// app.post('/register', (req, res) => {
+//     const {username, password} = req.body;
+
+//     const sql = ''
+// });
+
+
 // Route to handle user authentication (login)
 app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
