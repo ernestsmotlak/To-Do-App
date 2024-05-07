@@ -4,6 +4,7 @@ import LoginForm from './Components/LoginForm';
 import { useEffect, useState } from 'react';
 import NotFound from './Components/NotFound';
 import User from './Components/User';
+import Register from './Components/Register';
 
 function App() {
   const [uuidArray, setUuidArray] = useState([]);
@@ -39,7 +40,7 @@ function App() {
           {uuidArray.map((uniqueUserID, index) => (
             <Route key={index} path={`username/${uniqueUserID}`} element={<User />} />
           ))}
-
+          <Route path='/register' element={<Register />} />
         </Routes>
       </div>
     </Router>

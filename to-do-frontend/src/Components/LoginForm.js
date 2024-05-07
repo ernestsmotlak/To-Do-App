@@ -56,6 +56,10 @@ const LoginForm = (props) => {
     navigate(`/username/${uniqueUserId}`);
   };
 
+  const navigateToRegister = () => {
+    navigate('/register');
+  };
+
   return (
     <div>
       {/* <h2 className='mt-3 mb-3'>To-Do-App</h2> */}
@@ -78,7 +82,10 @@ const LoginForm = (props) => {
         >
           Login
         </button>
+        <br /><br /><br /><br />
       </form>
+
+      <button className='btn btn-primary' onClick={navigateToRegister}>Register / Sign Up</button>
 
       {loginStatus !== null && (
         <div>
