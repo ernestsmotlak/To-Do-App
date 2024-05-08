@@ -49,7 +49,7 @@ const Register = () => {
 
             <form className='container login-form' >
                 {/* onSubmit={handleSubmit} */}
-                Local
+                Local Register
                 <div className='row justify-content-center'>
                     <label className='form-label mt-2'>Enter the username:</label>
                     <input className='form-control-lg w-75 mb-3 login-form' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
