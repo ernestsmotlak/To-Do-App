@@ -118,12 +118,6 @@ const User = () => {
     //     }
     // };
 
-    const str = 'I am going to try to put this shitty database on my server, if it breaks, it breaks, what can you do hehe. what the fuck else am i supposed to do. I';
-    const str2 = 'I am going to try to put this shitty database on my server, if it breaks';
-    const strLen = str2.length;
-
-
-
     return (
         <div>
             {desktopView ? (
