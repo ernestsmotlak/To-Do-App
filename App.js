@@ -82,9 +82,26 @@ app.post('/api/login', (req, res) => {
 app.post('/api/addTask', (req, res) => {
     const { taskName, taskTime, taskDate, userId, taskUser } = req.body;
 
-    if (!taskDate || !taskName || !taskTime || !userId || !taskUser) {
-        return res.status(400).json({ error: "All fields are required." });
+    // if (!taskDate || !taskName || !taskTime || !userId || !taskUser) {
+    //     return res.status(400).json({ error: "All fields are required." });
+    // }
+
+    if (!taskDate) {
+        return res.status(400).json({ error: "TaskDate." });
     }
+    if (!taskName) {
+        return res.status(400).json({ error: "TaskName." });
+    }
+    if (!taskTime) {
+        return res.status(400).json({ error: "TaskTime." });
+    }
+    if (!userId) {
+        return res.status(400).json({ error: "UserID." });
+    }
+    if (!taskUser) {
+        return res.status(400).json({ error: "TaskUser." });
+    }
+
 
     const sql = 'INSERT INTO Task (TaskName, TaskTime, TaskDate, TaskUniqueUserID, TaskUser) VALUES (?, ?, ?, ?, ?)';
     db.run(sql, [taskName, taskTime, taskDate, userId, taskUser], function (err) {
