@@ -19,11 +19,42 @@ const db = new sqlite3.Database('sqlDataBase/Baza.db', sqlite3.OPEN_READWRITE, (
 
 app.use(bodyParser.json());
 
-// app.post('/register', (req, res) => {
-//     const {username, password} = req.body;
+app.post('/api/register', (req, res) => {
+    const { username, password, password2 } = req.body;
 
-//     const sql = ''
-// });
+    const checkIfUsernameExists = 'SELECT * FROM User WHERE Username = ?';
+    db.get(checkIfUsernameExists, [username], (err, user) => {
+        if (err) {
+            console.error('Error checking for username:' + err.message);
+            return res.status(500).json({ error: 'Internal server error.' });
+        }
+
+        if (user) {
+            return res.status(400).json({ error: 'Username already exists, pick another username!' });
+        }
+    });
+
+    if (password === password2) {
+        const insertNewUserQuery = 'INSERT INTO User (UserName, Password, UniqueUserID) VALUES (?, ?, ?)';
+        db.run(insertNewUserQuery, [username, password, generateUniqueUserID()], (err, user) => {
+            if (err) {
+                console.error('Error inserting user: ', err.message);
+                return res.status(500).json({ error: 'Internal server error.' });
+            }
+
+            res.json({ message: 'User ' + username + ' registered successfully!' });
+        });
+    }
+
+});
+
+function generateUniqueUserID() {
+    let uniqueID = '';
+    while (uniqueID.length < 64) {
+        uniqueID += Math.random().toString(36).substring(2, 15);
+    }
+    return uniqueID.substring(0, 64); // Trim to ensure the length is exactly 64
+}
 
 
 // Route to handle user authentication (login)
@@ -67,7 +98,7 @@ app.post('/api/addTask', (req, res) => {
 });
 
 app.post('/api/deleteTask', (req, res) => {
-    const { taskName, userUniqueID } = req.body;
+    const { taskName, uuid } = req.body;
 
     if (!taskName) {
         return res.status(400).json({ error: 'Task name is required!' });
@@ -211,7 +242,7 @@ app.post('/api/zbrisiTask', (req, res) => {
 
 });
 
-app.post('api/username', (req, res) => {
+app.post('/api/username', (req, res) => {
     const { uuid } = req.body;
 
     const sql = 'SELECT UserName FROM User WHERE UserName = ?';

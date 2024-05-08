@@ -11,7 +11,7 @@ const DeleteButton = (props) => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://84.247.184.37:3000/api/zbrisiTask', {
+            const response = await fetch('http://localhost:3000/api/zbrisiTask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
