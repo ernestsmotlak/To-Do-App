@@ -24,14 +24,7 @@ app.post('/api/register', (req, res) => {
 
     const checkIfUsernameExists = 'SELECT * FROM User WHERE Username = ?';
     db.get(checkIfUsernameExists, [username], (err, user) => {
-        if (err) {
-            console.error('Error checking for username:' + err.message);
-            return res.status(500).json({ error: 'Internal server error.' });
-        }
-
-        if (user) {
-            return res.status(400).json({ error: 'Username already exists, pick another username!' });
-        }
+         
     });
 
     if (password === password2) {
