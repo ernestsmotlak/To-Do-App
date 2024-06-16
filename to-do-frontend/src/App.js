@@ -20,7 +20,7 @@ function App() {
         const data = await response.json();
         const newArray = data.map(user => user.UniqueUserID);
         setUuidArray(newArray);
-        console.log('New Array: ' + newArray);
+        //console.log('New Array: ' + newArray);
 
       } catch (error) {
         console.log(error);
