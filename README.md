@@ -1,35 +1,68 @@
-# To-Do-App
+# Timetable Bus Transport App
 
-React, Node.js, Sqlite.
+[Frontend available here](http://84.247.184.37:3006/)
+[API available here](http://84.247.184.37:3000/)
 
-## Current
- - Footer idea: 
- ```
- <div class="card text-center">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-body-secondary">
-    2 days ago
-  </div>
+Login credentials:
+  - Username: aa
+  - Password: aa
+
+Timetable website for bus transports in Koper.
+
+### Made with React, Bootstrap, and Node.js
+---
+### How to run
+ - Run the App.js in the 'to-do-frontend' folder.
+ - Run the React app inside of the 'to-do-frontend' folder. 
+---
+## Screenshots
+
+### Frontend
+
+#### Web view
+
+##### Landing page
+<div align="center">
+    <img src='Screenshots/Screenshot 2024-06-16 at 15.18.05.png' width="600px"</img> 
 </div>
- ```
-- Create Footer
-- Views: 
-  - Mobile: < 480px
-  - Tablet & Desktop: < 480px 
 
-## CSS Next
-- On mobile view on the User.js component the horizontal alignment is not correct.
-    - The elements on the right of taskName are not as wide as the taskName div.
-- For every task component add on hover functionality
+##### User logs in
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.18.14.png" width="600px"</img> 
+</div>
 
-## Next
+##### Zoomed in functionality of updating a specific task
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.18.22.png" width="600px"</img> 
+</div>
 
-- The first fetch of the uuid's in the App.js on start is unnecessary.
-    - Instead after logging in, wait a 0.5 seconds and just make the /user/uuid of the user, nothing else is needed.
+##### Zoomed in functionality of adding/creating a new task
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.46.46.png" width="600px"</img> 
+</div>
+
+---
+
+#### Mobile view
+
+##### Landing page
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.19.36.png" height="300px"</img> 
+</div>
+
+##### Page showing all tasks of the logged in user
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.19.44.png"  height="300px"</img> 
+</div>
+
+##### Updating task on mobile view
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.19.50.png"  height="300px"</img> 
+</div>
+
+##### Adding/creating a new task
+<div align="center">
+    <img src="Screenshots/Screenshot 2024-06-16 at 15.19.58.png"  height="300px"</img> 
+</div>
+
+---
