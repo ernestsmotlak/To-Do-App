@@ -1,11 +1,10 @@
 import './App.css';
-
-
 import LoginForm from './Components/LoginForm';
 import { useEffect, useState } from 'react';
 import NotFound from './Components/NotFound';
 import User from './Components/User';
 import Register from './Components/Register';
+import { BrowserRouter as Route, Routes, Router } from 'react-router-dom';
 
 function App() {
   const [uuidArray, setUuidArray] = useState([]);

@@ -24,7 +24,7 @@ app.post('/api/register', (req, res) => {
 
     const checkIfUsernameExists = 'SELECT * FROM User WHERE Username = ?';
     db.get(checkIfUsernameExists, [username], (err, user) => {
-         
+
     });
 
     if (password === password2) {
